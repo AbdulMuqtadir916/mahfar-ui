@@ -19,6 +19,7 @@ function HeroSection() {
       <div className=" absolute top-[42vw] md:top-[25vw] md:right-[2vw] lg:top-[2vw] xl:top-[50px] right-0 lg:right-[6vw] xl:right-[127px] 2xl:right-[175px]">
         <div className="absolute bg-white rounded-full w-auto h-auto py-2 px-3 top-0 right-[18vw] lg:right-[8vw] xl:right-[8vw] xl:top-[1.5vw]">
           <Image
+            priority={true}
             className="w-[15vw] md:w-[11vw] lg:w-[7vw] xl:w-[6.2vw] h-auto"
             src="/quality.svg"
             alt="quality"
@@ -27,6 +28,7 @@ function HeroSection() {
           />
         </div>
         <Image
+          priority={true}
           className="w-[730px] lg:w-[551px] xl:w-[730px] h-auto xl:h-[440px]"
           src="/heroSec.svg"
           alt="homeImage"
