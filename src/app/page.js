@@ -7,6 +7,7 @@ import ConstructFuture from './components/ConstructFuture'
 import BrandPatners from './components/BrandPatners'
 import FeedBack from './components/FeedBack'
 import ProjDelivered from './components/ProjDelivered'
+import Footer from './components/Footer'
 
 export default function Home() {
   return (
@@ -19,6 +20,7 @@ export default function Home() {
       <BrandPatners/>
       <FeedBack/>
       <ProjDelivered/>
+      <Footer/>
     </div>
   )
 }
