@@ -25,7 +25,7 @@ function IdeasAndInivation() {
         <div>
           <Link
             href="/about-us"
-            className="block py-1  rounded pb-[10px] sm:pb[0px]  mt-1"
+            className=" py-1  rounded pb-[10px] sm:pb[0px]  mt-1"
           >
             <button
               // onClick={modal}

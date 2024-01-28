@@ -8,19 +8,21 @@ import BrandPatners from './components/BrandPatners'
 import FeedBack from './components/FeedBack'
 import ProjDelivered from './components/ProjDelivered'
 import Footer from './components/Footer'
+import Assistence from './components/Assistence'
 
 export default function Home() {
   return (
     <div>
-      <Navbar/>
-      <HeroSection/>
-      <ProductsAndServices/>
-      <IdeasAndInivation/>
-      <ConstructFuture/>
-      <BrandPatners/>
-      <FeedBack/>
-      <ProjDelivered/>
-      <Footer/>
+      {/* <Navbar/> */}
+      <HeroSection />
+      <ProductsAndServices />
+      <IdeasAndInivation />
+      <ConstructFuture />
+      <BrandPatners />
+      <FeedBack />
+      <ProjDelivered />
+      <Assistence />
+      {/* <Footer/> */}
     </div>
   )
 }
