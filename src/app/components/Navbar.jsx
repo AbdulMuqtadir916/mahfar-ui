@@ -41,7 +41,7 @@ function Navbar() {
               {pathname.length > 1 ? (
                 <Image
                   priority={true}
-                  className="  md:w-[28vw] min-w-[25vw] h-[10vw] md:w-[20vw] md:h-[8vw] lg:w-[246px] lg:h-[56px]"
+                  className="  w-[28vw] min-w-[25vw] h-[10vw] md:w-[20vw] md:h-[8vw] lg:w-[246px] lg:h-[56px]"
                   src="/logoC.svg"
                   alt="logo"
                   quality={100}
@@ -51,7 +51,7 @@ function Navbar() {
               ) : (
                 <Image
                   priority={true}
-                  className="  md:w-[28vw] min-w-[25vw] h-[10vw] md:w-[20vw] md:h-[8vw] lg:w-[246px] lg:h-[56px]"
+                  className="  w-[28vw] min-w-[25vw] h-[10vw] md:w-[20vw] md:h-[8vw] lg:w-[246px] lg:h-[56px]"
                   src="/logo1.svg"
                   alt="logo"
                   quality={100}
