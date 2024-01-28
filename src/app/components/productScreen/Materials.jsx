@@ -68,7 +68,7 @@ const Materials = () => {
         </div>
         <div className="md:w-[40%]">
           <div className="flex  items-center justify-between">
-            <div className="text-slate-900 text-[22px] lg:text-[38px] font-semibold ">
+            <div className="text-slate-900 text-[22px] lg:text-[31px] font-semibold ">
               Metal Shingles
             </div>
             <div className="w-40 h-11 rounded-lg justify-start items-start inline-flex">

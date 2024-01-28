@@ -20,7 +20,6 @@ function Navbar() {
     { path: "/contact-us", text: "Conatct Us" },
   ];
 
-
   return (
     <>
       {/* <div>
@@ -42,7 +41,7 @@ function Navbar() {
               {pathname.length > 1 ? (
                 <Image
                   priority={true}
-                  className="  w-[28vw] h-[10vw] md:w-[20vw] md:h-[8vw] lg:w-[246px] lg:h-[56px]"
+                  className="  md:w-[28vw] min-w-[25vw] h-[10vw] md:w-[20vw] md:h-[8vw] lg:w-[246px] lg:h-[56px]"
                   src="/logoC.svg"
                   alt="logo"
                   quality={100}
@@ -52,7 +51,7 @@ function Navbar() {
               ) : (
                 <Image
                   priority={true}
-                  className="  w-[28vw] h-[10vw] md:w-[20vw] md:h-[8vw] lg:w-[246px] lg:h-[56px]"
+                  className="  md:w-[28vw] min-w-[25vw] h-[10vw] md:w-[20vw] md:h-[8vw] lg:w-[246px] lg:h-[56px]"
                   src="/logo1.svg"
                   alt="logo"
                   quality={100}
@@ -93,9 +92,7 @@ function Navbar() {
                   (pathname === "/" || pathname === "") && e.path === "/"
                     ? "text-gray-800 hover:text-[#fff]"
                     : pathname === e.path ||
-                      (pathname
-                        .split("")[1]
-                         == e.text[0].toLowerCase() &&
+                      (pathname.split("")[1] == e.text[0].toLowerCase() &&
                         pathname.length >= 2)
                     ? // : e.path > 1
                       "text-gray-800 hover:text-[#fff]"
