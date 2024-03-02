@@ -6,7 +6,7 @@ function ProductsAndServices() {
   return (
     <div className="px-[7vw] xl:px-[10vw] 2xl:px-[10vw] pt-28 w-full pb-[139px] bg-white">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 pb-[117px] gap-[30px]">
-        <div className="w-auto lg:h-[270px] flex-col justify-start items-start gap-3 inline-flex">
+        <div className="group cursor-pointer w-auto lg:h-[270px] flex-col justify-start items-start gap-3 inline-flex">
           <div className="leading-[46px]">
             <span className="text-zinc-800 text-[42px] font-normal ">
               Our Extensive <br />
@@ -15,7 +15,7 @@ function ProductsAndServices() {
               Product Range
             </span>
           </div>
-          <div className="justify-start items-center gap-1 inline-flex  hover:gap-4 hover:duration-700 duration-700 hover:ease-in-out cursor-pointer">
+          <div className="justify-start items-center gap-1 inline-flex  group-hover:gap-4 group-hover:duration-700 duration-700 group-hover:ease-in-out cursor-pointer">
             <div className="ViewAll text-cyan-500 text-[22px]  ">View All</div>
             <div className="w-[42px] h-[42px] relative ">
               <Image
@@ -27,9 +27,9 @@ function ProductsAndServices() {
             </div>
           </div>
         </div>
-        <Link href="/product/roofing-solution">
+        <Link className="" href="/product/roofing-solution">
           <div
-            className='w-auto h-[270px] sm:h-[442px]
+            className='group w-auto h-[270px] sm:h-[442px]
         transition duration-700 ease-in-out hover:scale-105 cursor-pointer md:h-[270px] p-3.5 rounded-xl border border-stone-300 flex-col justify-start items-center gap-2.5 inline-flex" '
           >
             <Image
@@ -39,11 +39,11 @@ function ProductsAndServices() {
               width="0"
               height="0"
             />
-            <div className=" h-[42px]  pt-[6px] justify-between hover:duration-700 duration-700 mr-[20px] hover:mr-[0px] hover:ease-in-out cursor-pointer items-center flex">
+            <div className=" h-[42px]  pt-[6px] justify-between group-hover:duration-700 duration-700 mr-[20px] group-hover:mr-[0px] group-hover:ease-in-out cursor-pointer items-center flex">
               <div className="text-zinc-800 text-[22px]  ">
                 Roofing Solution
               </div>
-              <div className="w-[42px] hover:duration-700 duration-700 hover:ease-in-out cursor-pointer h-[42px] relative ">
+              <div className="w-[42px]  cursor-pointer h-[42px] relative ">
                 <Image
                   alt="arrow"
                   src="/icon-arrow-narrow-right.svg"

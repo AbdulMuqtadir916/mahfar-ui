@@ -1,12 +1,21 @@
+"use client";
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const Materials = () => {
-  const nav = [
-    "Metal Shingles",
-    "Natural Slate Tile",
-    "Sandwich Panels",
-    " Bitumen Shingles",
+  const pName = usePathname();
+  console.log("pName", pName);
+  const pathname = pName.split("/").pop();
+
+  const navBar = [
+    { id: 1, name: "Classic", pathUrl: "classic" },
+    { id: 2, name: "Edge Profile", pathUrl: "edge_profile" },
+    { id: 3, name: "Roman Profile", pathUrl: "roman_profile" },
+    { id: 4, name: "Roofing Accessories", pathUrl: "roofing_accessories" },
+    { id: 5, name: "Shake", pathUrl: "shake" },
+    { id: 6, name: "Shingle", pathUrl: "shingle" },
   ];
 
   const colors = [
@@ -22,10 +31,7 @@ const Materials = () => {
   ];
   return (
     <div className="px-[7vw] xl:px-[10vw] 2xl:px-[10vw] w-full">
-      <div
-        className=" mt-[50px]
-     border-b border-zinc-300 justify-start items-start inline-flex flex-wrap"
-      >
+      <div className=" mt-[50px] w-full border-b border-zinc-300 justify-start items-start inline-flex relative overflow-x-auto">
         {/* {nav.map((e, i) => (
         <div
           key={i}
@@ -34,25 +40,21 @@ const Materials = () => {
           <div className="text-cyan-500 text-lg font-medium ">{e}</div>
         </div>
       ))} */}
-        <div className="px-6 py-[18px] border-b-2 border-cyan-500 justify-center items-center gap-2.5 flex ">
-          <div className="text-cyan-500 text-lg font-medium ">
-            Metal Shingles
-          </div>
-        </div>
-        <div className="px-6 py-[18px] justify-center items-center gap-2.5 flex">
-          <div className="text-slate-900 text-opacity-50 text-lg font-medium ">
-            Natural Slate Tile
-          </div>
-        </div>
-        <div className="px-6 py-[18px] justify-center items-center gap-2.5 flex">
-          <div className="text-slate-900 text-opacity-50 text-lg font-medium ">
-            Sandwich Panels
-          </div>
-        </div>
-        <div className="px-6 py-[18px] justify-center items-center gap-2.5 flex">
-          <div className="text-slate-900 text-opacity-50 text-lg font-medium ">
-            Bitumen Shingles
-          </div>
+
+        <div className=" flex">
+          {navBar.map((e, i) => (
+            <Link key={i} href={`/product/roofing-solution/${e.pathUrl}`}>
+              <div
+                className={`cursor-pointer whitespace-nowrap px-6 py-[18px] justify-center items-center gap-2.5 flex ${
+                  pathname === e.pathUrl ? "border-b-2 border-cyan-500" : ""
+                }`}
+              >
+                <div className="text-cyan-500 text-lg font-medium ">
+                  {e.name}
+                </div>
+              </div>
+            </Link>
+          ))}
         </div>
       </div>
       {/* Nav Completed */}
@@ -60,6 +62,7 @@ const Materials = () => {
       <div className="mt-[35px] p-[20px] md:p-[30px] lg:p-[50px] w-full rounded-xl border border-zinc-300  flex flex-col md:items-center md:flex-row">
         <div className="md:w-[60%]">
           <Image
+            className="w-auto h-auto"
             src="/roofingMaterails/img1.svg"
             width="478"
             height="318"
@@ -88,24 +91,20 @@ const Materials = () => {
             {colors.map((e, i) => (
               <div key={i} className="flex flex-col items-center ">
                 <div>
-                  <Image src={e.url} width="90" height="75" alt="" />
+                  <Image
+                    className="w-auto h-auto"
+                    src={e.url}
+                    width="90"
+                    height="75"
+                    alt=""
+                  />
                 </div>
                 <div className="text-slate-900 text-sm font-medium">
                   {e.name}
                 </div>
               </div>
             ))}
-            {/* <div className="flex flex-col items-center ">
-              <div>
-                <Image
-                  src="/roofingMaterails/img2.svg"
-                  width="90"
-                  height="75"
-                  alt=""
-                />
-              </div>
-              <div className="text-slate-900 text-sm font-medium">CHARCOAL</div>
-            </div> */}
+          
           </div>
         </div>
       </div>

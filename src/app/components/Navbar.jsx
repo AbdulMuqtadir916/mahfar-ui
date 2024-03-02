@@ -3,10 +3,10 @@ import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-// import e from "express";
 
 function Navbar() {
   const pathname = usePathname();
+  console.log("pathname",pathname)
   const [showMenu, setShowMenu] = useState(false);
   const onClickMenu = () => {
     setShowMenu(!showMenu);
@@ -19,7 +19,6 @@ function Navbar() {
     { path: "/about-us", text: "About Us" },
     { path: "/contact-us", text: "Conatct Us" },
   ];
-
 
   return (
     <>
@@ -39,26 +38,27 @@ function Navbar() {
         <div className="flex h-auto w-full lg:w-auto items-center justify-between">
           <div className=" ">
             <Link href="/">
-              {pathname.length > 1 ? (
+              {pathname === "/" ? (
                 <Image
-                  priority={true}
-                  className="  w-[28vw] h-[10vw] md:w-[20vw] md:h-[8vw] lg:w-[246px] lg:h-[56px]"
-                  src="/logoC.svg"
-                  alt="logo"
-                  quality={100}
-                  width={0}
-                  height={0}
-                />
+                priority={true}
+                className="  w-[28vw] h-[10vw] md:w-[20vw] md:h-[8vw] lg:w-[246px] lg:h-[56px]"
+                src="/logo1.svg"
+                alt="logo"
+                quality={100}
+                width={0}
+                height={0}
+              />
               ) : (
+               
                 <Image
-                  priority={true}
-                  className="  w-[28vw] h-[10vw] md:w-[20vw] md:h-[8vw] lg:w-[246px] lg:h-[56px]"
-                  src="/logo1.svg"
-                  alt="logo"
-                  quality={100}
-                  width={0}
-                  height={0}
-                />
+                priority={true}
+                className="  w-[28vw] h-[10vw] md:w-[20vw] md:h-[8vw] lg:w-[246px] lg:h-[56px]"
+                src="/logoC.svg"
+                alt="logo"
+                quality={100}
+                width={0}
+                height={0}
+              />
               )}
             </Link>
           </div>
@@ -70,13 +70,23 @@ function Navbar() {
               className="block hover:text-white focus:text-white focus:outline-none"
             >
               {/* <i class="fa-sharp fa-solid fa-bars" style={{ color: "#2c2c2c" }}></i> */}
-              <Image
-                className="w-[24px] text-white h-[24px]"
-                alt="menubar"
-                src="/menu.svg"
-                width="10"
-                height="10"
-              />
+              {pathname === "/" ? (
+                <Image
+                  className="w-[24px] text-white h-[24px]"
+                  alt="menubar"
+                  src="/menu.svg"
+                  width="10"
+                  height="10"
+                />
+              ) : (
+                <Image
+                  className="w-[24px] text-white h-[24px]"
+                  alt="menubar"
+                  src="/menuBlack.svg"
+                  width="10"
+                  height="10"
+                />
+              )}
             </button>
           </div>
         </div>
@@ -93,9 +103,7 @@ function Navbar() {
                   (pathname === "/" || pathname === "") && e.path === "/"
                     ? "text-gray-800 hover:text-[#fff]"
                     : pathname === e.path ||
-                      (pathname
-                        .split("")[1]
-                         == e.text[0].toLowerCase() &&
+                      (pathname.split("")[1] == e.text[0].toLowerCase() &&
                         pathname.length >= 2)
                     ? // : e.path > 1
                       "text-gray-800 hover:text-[#fff]"
