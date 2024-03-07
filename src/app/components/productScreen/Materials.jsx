@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -8,6 +8,11 @@ const Materials = () => {
   const pName = usePathname();
   console.log("pName", pName);
   const pathname = pName.split("/").pop();
+console.log("pathname",pathname)
+  const [selectedItem, setSelectedItem] = useState({
+    name: "CHARCOAL",
+    url: "/Roofing/classic/Roofng01.jpg",
+  });
 
   const navBar = [
     { id: 1, name: "Classic", pathUrl: "classic" },
@@ -19,15 +24,24 @@ const Materials = () => {
   ];
 
   const colors = [
-    { name: "CHARCOAL", url: "/roofingMaterails/img2.svg" },
-    { name: "CHARCOAL", url: "/roofingMaterails/img2.svg" },
-    { name: "CHARCOAL", url: "/roofingMaterails/img2.svg" },
-    { name: "CHARCOAL", url: "/roofingMaterails/img2.svg" },
-    { name: "CHARCOAL", url: "/roofingMaterails/img2.svg" },
-    { name: "CHARCOAL", url: "/roofingMaterails/img2.svg" },
-    { name: "CHARCOAL", url: "/roofingMaterails/img2.svg" },
-    { name: "CHARCOAL", url: "/roofingMaterails/img2.svg" },
-    { name: "CHARCOAL", url: "/roofingMaterails/img2.svg" },
+    { url: `/Roofing/${pathname}/Roofng01.jpg` },
+    { url: `/Roofing/${pathname}/Roofng02.jpg` },
+    { url: `/Roofing/${pathname}/Roofng03.jpg` },
+    { url: `/Roofing/${pathname}/Roofng04.jpg` },
+    { url: `/Roofing/${pathname}/Roofng05.jpg` },
+    { url: `/Roofing/${pathname}/Roofng06.jpg` },
+    { url: `/Roofing/${pathname}/Roofng07.jpg` },
+    { url: `/Roofing/${pathname}/Roofng08.jpg` },
+    { url: `/Roofing/${pathname}/Roofng09.jpg` },
+    { url: `/Roofing/${pathname}/Roofng10.jpg` },
+    { url: `/Roofing/${pathname}/Roofng11.jpg` },
+    { url: `/Roofing/${pathname}/Roofng12.jpg` },
+    { url: `/Roofing/${pathname}/Roofng13.jpg` },
+    { url: `/Roofing/${pathname}/Roofng14.jpg` },
+    { url: `/Roofing/${pathname}/Roofng15.jpg` },
+    { url: `/Roofing/${pathname}/Roofng16.jpg` },
+    { url: `/Roofing/${pathname}/Roofng17.jpg` },
+    { url: `/Roofing/${pathname}/Roofng18.jpg` },
   ];
   return (
     <div className="px-[7vw] xl:px-[10vw] 2xl:px-[10vw] w-full">
@@ -59,25 +73,39 @@ const Materials = () => {
       </div>
       {/* Nav Completed */}
 
-      <div className="mt-[35px] p-[20px] md:p-[30px] lg:p-[50px] w-full rounded-xl border border-zinc-300  flex flex-col md:items-center md:flex-row">
-        <div className="md:w-[60%]">
+      <div className="mt-[35px] p-[20px] md:p-[30px] lg:p-[50px] w-full rounded-xl border border-zinc-300  flex flex-col md:items-center lg:flex-row gap-0 lg:gap-[45px] xl:gap-[25px]">
+        <div className="lg:w-[60%] m-auto">
           <Image
-            className="w-auto h-auto"
-            src="/roofingMaterails/img1.svg"
+            className="w-auto h-auto mb-[35px]"
+            // src="/Classic/Roofng05.jpg"
+            src={selectedItem.url}
             width="478"
             height="318"
             alt=""
           />
         </div>
-        <div className="md:w-[40%]">
-          <div className="flex  items-center justify-between">
+        <div className="lg:w-[40%]">
+          <div className="flex flex-col gap-[15px] justify-between">
             <div className="text-slate-900 text-[22px] lg:text-[31px] font-semibold ">
               Metal Shingles
             </div>
-            <div className="w-40 h-11 rounded-lg justify-start items-start inline-flex">
-              <div className="grow shrink basis-0 h-11 px-[10px] md:px-[18px] py-2.5 bg-cyan-500 rounded-lg shadow border border-cyan-500 justify-center items-center gap-2 flex">
-                <div className="text-white text-base font-semibold  leading-normal">
+            <div className="  rounded-lg justify-start items-start flex flex-wrap gap-[15px]">
+              <div className="grow px-[4px] shrink cursor-pointer h-11  py-2.5 bg-cyan-500 rounded-lg shadow border border-cyan-500 justify-center items-center gap-2 flex">
+                <div className="text-white text-base font-semibold text-center leading-none">
                   Get Quote
+                </div>
+              </div>
+              <div className="grow px-[4px] shrink cursor-pointer h-11  py-2.5 bg-white  rounded-lg shadow border border-[#D0D5DD] text-black justify-center items-center gap-2 flex">
+                <div className="text-black text-base flex items-center gap-2 font-semibold  leading-normal">
+                  <span>
+                    <Image
+                      height="20"
+                      alt="downloadIcon"
+                      width="20"
+                      src="/downloadIcon.svg"
+                    />
+                  </span>{" "}
+                  Download Broucher
                 </div>
               </div>
             </div>
@@ -87,24 +115,32 @@ const Materials = () => {
             Select Colour
           </div>
           {/* More Materials */}
-          <div className="flex gap-[20px] md:gap-[10px] lg:gap-[16px] flex-wrap mt-[20px]">
+          <div
+            className={`flex gap-[20px] justify-center md:gap-[10px] lg:gap-[16px] flex-wrap mt-[20px] `}
+          >
             {colors.map((e, i) => (
-              <div key={i} className="flex flex-col items-center ">
+              <div
+                key={i}
+                className="flex flex-col cursor-pointer items-center "
+              >
                 <div>
                   <Image
-                    className="w-auto h-auto"
+                    onClick={() => {
+                      setSelectedItem(e);
+                    }}
+                    className={`w-[90px] h-[75px] rounded-lg ${
+                      e.url == selectedItem.url
+                        ? "border-[#00a8cf8a]  border-4  shadow-md shadow-[#00000040]"
+                        : ""
+                    }`}
                     src={e.url}
                     width="90"
                     height="75"
                     alt=""
                   />
                 </div>
-                <div className="text-slate-900 text-sm font-medium">
-                  {e.name}
-                </div>
               </div>
             ))}
-          
           </div>
         </div>
       </div>

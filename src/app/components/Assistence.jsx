@@ -12,7 +12,7 @@ function Assistence() {
           <div className="text-white text-[4.3vw] sm:text-[2vw] md:text-[1.5vw] lg:text-[1.3vw] xl:text-[1vw] font-medium ">
             Need Assistance?
           </div>
-          <div className="text-white font-bold text-[6.3vw] sm:text-[5.3vw] md:text-[3vw] lg:text-[3.3vw] xl:text-[3vw] leading-[7vw] sm:leading-[3.1vw] lg:leading-[3vw] xl:leading-[3vw]  ">
+          <div className="text-white font-bold text-[6.3vw] sm:text-[5.3vw] md:text-[3vw] lg:text-[3.3vw] xl:text-[3vw] leading-[7vw] sm:leading-[5.1vw] lg:leading-[3vw] xl:leading-[3vw]  ">
             Do You Have Custom
             <br />
             Requirement for
