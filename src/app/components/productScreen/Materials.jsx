@@ -8,10 +8,10 @@ const Materials = () => {
   const pName = usePathname();
   console.log("pName", pName);
   const pathname = pName.split("/").pop();
-console.log("pathname",pathname)
+  console.log("pathname", pathname);
   const [selectedItem, setSelectedItem] = useState({
     name: "CHARCOAL",
-    url: "/Roofing/classic/Roofng01.jpg",
+    url: `/Roofing/${pathname}/Roofng01.jpg`,
   });
 
   const navBar = [
@@ -46,20 +46,11 @@ console.log("pathname",pathname)
   return (
     <div className="px-[7vw] xl:px-[10vw] 2xl:px-[10vw] w-full">
       <div className=" mt-[50px] w-full border-b border-zinc-300 justify-start items-start inline-flex relative overflow-x-auto">
-        {/* {nav.map((e, i) => (
-        <div
-          key={i}
-          className="px-6 py-[18px] border-b-2 border-cyan-500 justify-center items-center gap-2.5 flex"
-        >
-          <div className="text-cyan-500 text-lg font-medium ">{e}</div>
-        </div>
-      ))} */}
-
         <div className=" flex">
           {navBar.map((e, i) => (
             <Link key={i} href={`/product/roofing-solution/${e.pathUrl}`}>
               <div
-                className={`cursor-pointer whitespace-nowrap px-6 py-[18px] justify-center items-center gap-2.5 flex ${
+                className={`cursor-pointer whitespace-nowrap px-6 py-[18px] justify-center items-center gap-2.5 flex hover:border-b-2 hover:border-cyan-300 ${
                   pathname === e.pathUrl ? "border-b-2 border-cyan-500" : ""
                 }`}
               >
@@ -77,7 +68,6 @@ console.log("pathname",pathname)
         <div className="lg:w-[60%] m-auto">
           <Image
             className="w-auto h-auto mb-[35px]"
-            // src="/Classic/Roofng05.jpg"
             src={selectedItem.url}
             width="478"
             height="318"
@@ -99,6 +89,7 @@ console.log("pathname",pathname)
                 <div className="text-black text-base flex items-center gap-2 font-semibold  leading-normal">
                   <span>
                     <Image
+                      className="w-auto h-auto"
                       height="20"
                       alt="downloadIcon"
                       width="20"
@@ -125,6 +116,7 @@ console.log("pathname",pathname)
               >
                 <div>
                   <Image
+                    priority={false}
                     onClick={() => {
                       setSelectedItem(e);
                     }}

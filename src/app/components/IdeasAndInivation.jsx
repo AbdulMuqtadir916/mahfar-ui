@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-function IdeasAndInivation() {
+function IdeasAndInivation({showAboutUsBtn}) {
   return (
     <div className="pl-[7vw] xl:pl-[10vw] 2xl:pl-[10vw] bg-neutral-100 py-[35px] md:pt-[97px] pb-[60px] w-full flex flex-col lg:flex-row">
       <div className="flex flex-col gap-[21px] md:pt-[52px] pb-[30px] sm:pb-[60px]">
@@ -22,7 +22,8 @@ function IdeasAndInivation() {
           products and commitment to excellence, we are your trusted partner for
           all your building material requirements.
         </div>
-        <div>
+       
+       {showAboutUsBtn&& <div>
           <Link
             href="/about-us"
             className=" py-1  rounded pb-[10px] sm:pb[0px]  mt-1"
@@ -34,7 +35,7 @@ function IdeasAndInivation() {
               About Us
             </button>
           </Link>
-        </div>
+        </div>}
       </div>
       <div className="">
         <Image

@@ -84,8 +84,8 @@ function ProjDelivered() {
           ></Image>
         </div>
 
-        <div className="md:col-span-2 lg:col-span-1 bg-gradient-to-br w-full h-full from-cyan-500 to-cyan-600 rounded-md flex items-center justify-center py-[25px] lg:py-[0px] px-[25px]">
-          <div className=" justify-between sm:gap-[18vw] lg:gap-[0px] hover:duration-700 duration-700 mr-[20px] hover:mr-[0px] hover:ease-in-out cursor-pointer items-center flex ">
+        <div className="group md:col-span-2 cursor-pointer lg:col-span-1 bg-gradient-to-br w-full h-full from-cyan-500 to-cyan-600 rounded-md flex items-center justify-center py-[25px] lg:py-[0px] px-[25px]">
+          <div className=" justify-between sm:gap-[18vw] lg:gap-[0px] hover:duration-700 duration-700 mr-[20px] group-hover:mr-[0px] hover:ease-in-out cursor-pointer items-center flex ">
             <div className="text-white text-[5vw] sm:text-[4vw] md:text-[3.5vw] lg:text-[2.4vw] xl:text-[2vw]  ">
               Lets Connect for your project
             </div>

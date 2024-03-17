@@ -16,10 +16,10 @@ export default function Home() {
       {/* <Navbar/> */}
       <HeroSection />
       <ProductsAndServices />
-      <IdeasAndInivation />
+      <IdeasAndInivation showAboutUsBtn={true}/>
       <ConstructFuture />
       <BrandPatners />
-      <FeedBack />
+      {/* <FeedBack /> */}
       <ProjDelivered />
       <Assistence />
       {/* <Footer/> */}
