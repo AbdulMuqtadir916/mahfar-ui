@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import ProdNavbar from "./ProdNavbar";
 
 const Materials = () => {
   const pName = usePathname();
@@ -45,23 +46,8 @@ const Materials = () => {
   ];
   return (
     <div className="px-[7vw] xl:px-[10vw] 2xl:px-[10vw] w-full">
-      <div className=" mt-[50px] w-full border-b border-zinc-300 justify-start items-start inline-flex relative overflow-x-auto">
-        <div className=" flex">
-          {navBar.map((e, i) => (
-            <Link key={i} href={`/product/roofing-solution/${e.pathUrl}`}>
-              <div
-                className={`cursor-pointer whitespace-nowrap px-6 py-[18px] justify-center items-center gap-2.5 flex hover:border-b-2 hover:border-cyan-300 ${
-                  pathname === e.pathUrl ? "border-b-2 border-cyan-500" : ""
-                }`}
-              >
-                <div className="text-cyan-500 text-lg font-medium ">
-                  {e.name}
-                </div>
-              </div>
-            </Link>
-          ))}
-        </div>
-      </div>
+      <ProdNavbar navBar={navBar} />
+
       {/* Nav Completed */}
 
       <div className="mt-[35px] p-[20px] md:p-[30px] lg:p-[50px] w-full rounded-xl border border-zinc-300  flex flex-col md:items-center lg:flex-row gap-0 lg:gap-[45px] xl:gap-[25px]">

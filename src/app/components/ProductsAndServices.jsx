@@ -104,29 +104,31 @@ function ProductsAndServices() {
             </div>
           </div>
         </div>
-        <div
-          className='w-auto h-[270px] sm:h-[442px]
+        <Link className="" href="/product/composite-wood/decking">
+          <div
+            className='w-auto h-[270px] sm:h-[442px]
         transition duration-700 ease-in-out hover:scale-105 cursor-pointer md:h-[270px] p-3.5 rounded-xl border border-stone-300 flex-col justify-start items-center gap-2.5 inline-flex" '
-        >
-          <Image
-            className="w-full h-[200px] sm:h-[378px] md:h-[200px]"
-            alt="roofing"
-            src="/compositeWood.svg"
-            width="0"
-            height="0"
-          />
-          <div className=" h-[42px]  pt-[6px] justify-between hover:duration-700 duration-700 mr-[20px] hover:mr-[0px] hover:ease-in-out cursor-pointer items-center flex">
-            <div className="text-zinc-800 text-[22px]  ">Composite Wood</div>
-            <div className="w-[42px] hover:duration-700 duration-700 hover:ease-in-out cursor-pointer h-[42px] relative ">
-              <Image
-                alt="arrow"
-                src="/icon-arrow-narrow-right.svg"
-                height={42}
-                width={42}
-              ></Image>
+          >
+            <Image
+              className="w-full h-[200px] sm:h-[378px] md:h-[200px]"
+              alt="roofing"
+              src="/compositeWood.svg"
+              width="0"
+              height="0"
+            />
+            <div className=" h-[42px]  pt-[6px] justify-between hover:duration-700 duration-700 mr-[20px] hover:mr-[0px] hover:ease-in-out cursor-pointer items-center flex">
+              <div className="text-zinc-800 text-[22px]  ">Composite Wood</div>
+              <div className="w-[42px] hover:duration-700 duration-700 hover:ease-in-out cursor-pointer h-[42px] relative ">
+                <Image
+                  alt="arrow"
+                  src="/icon-arrow-narrow-right.svg"
+                  height={42}
+                  width={42}
+                ></Image>
+              </div>
             </div>
           </div>
-        </div>
+        </Link>
         <div
           className='w-auto h-[270px] sm:h-[442px]
         transition duration-700 ease-in-out hover:scale-105 cursor-pointer md:h-[270px] p-3.5 rounded-xl border border-stone-300 flex-col justify-start items-center gap-2.5 inline-flex" '
