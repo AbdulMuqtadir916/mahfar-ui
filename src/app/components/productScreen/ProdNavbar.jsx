@@ -11,7 +11,7 @@ const ProdNavbar = ({ navBar, navColor }) => {
   const pathname = pName.split("/").pop();
   console.log("pathname", pathname);
   return (
-    <div className=" mt-[10px] w-full border-b border-zinc-300 justify-start items-start inline-flex relative overflow-x-auto">
+    <div className={` mt-[10px] w-full ${navColor?"":"border-b border-zinc-300"} justify-start items-start inline-flex relative overflow-x-auto`}>
       <div className=" flex">
         {navBar.map((e, i) => (
           <Link key={i} href={`/product/${productName}/${e.pathUrl}`}>

@@ -11,12 +11,23 @@ const CompositeWood = ({ categories }) => {
     const [navColor, setNavColor] = useState(false)
 
     const changeNavColor = () => {
-        // console.log("object", window.scrollY)
-        if (window.scrollY >= 509) {
-            // console.log("object changed")
-            setNavColor(true)
+        console.log("object", window.scrollY)
+        if (window.innerWidth >= 1024) {
+            if (window.scrollY >= 509) {
+                // console.log("object changed")
+                setNavColor(true)
+            }
+            else {
+                setNavColor(false)
+            }
         } else {
-            setNavColor(false)
+            if (window.scrollY >= 374) {
+                // console.log("object changed")
+                setNavColor(true)
+            }
+            else {
+                setNavColor(false)
+            }
         }
     }
 
@@ -32,9 +43,9 @@ const CompositeWood = ({ categories }) => {
     return (
         <div className=''>
             <HeroSec productName={"Composite wood"} productDetail={"Tile offers a unique elegance to any home, adding the beauty and style of Mediterranean Tile.A long-standing reputation established for its performance, longevity and versatility, Tile is an ideal alternative to traditional tile products."} productImage={"/compositeWoodHero.svg"} />
-            <div className={`w-[100%] px-[7vw] xl:px-[10vw] 2xl:px-[10vw] sticky top-[93.9px] ${navColor ? "bg-[#344054] text-white" : "bg-white"}`}>
+            <div className={`w-[100%] px-[7vw] xl:px-[10vw] 2xl:px-[10vw] sticky top-[75.5px] lg:top-[93.9px] z-20 ${navColor ? "bg-[#344054] text-white" : "bg-white"}`}>
 
-                <ProdNavbar  navBar={navBar} navColor={navColor} />
+                <ProdNavbar navBar={navBar} navColor={navColor} />
             </div>
             {/* <Materials categories={categories} /> */}
             <Patners patner="Our Composite wood Partners" />
