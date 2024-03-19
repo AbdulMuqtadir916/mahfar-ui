@@ -5,7 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import ProdNavbar from "./ProdNavbar";
 
-const Materials = () => {
+const Main = () => {
   const pName = usePathname();
   console.log("pName", pName);
   const pathname = pName.split("/").pop();
@@ -91,7 +91,7 @@ const Materials = () => {
           <div className="text-slate-900 text-[20px] md:text-[22px] font-medium mt-[36px]">
             Select Colour
           </div>
-          {/* More Materials */}
+          {/* More Main */}
           <div
             className={`flex gap-[20px] justify-center md:gap-[10px] lg:gap-[16px] flex-wrap mt-[20px] `}
           >
@@ -126,4 +126,4 @@ const Materials = () => {
   );
 };
 
-export default Materials;
+export default Main;

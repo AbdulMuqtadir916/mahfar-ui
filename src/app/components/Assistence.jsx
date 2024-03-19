@@ -27,7 +27,13 @@ function Assistence() {
         </div>
         <div className="w-full h-[50%] md:w-6/12 md:h-full  relative flex justify-center">
           <div className="absolute bottom-[20px] md:bottom-[38px] lg:bottom-[93px]">
-            <Image src="/bahrinTower3.svg" className="md:w-[250px] lg:w-[355px]" width={200} height={740} alt="" />
+            <Image
+              src="/bahrinTower3.svg"
+              className="md:w-[250px] lg:w-[355px]"
+              width={200}
+              height={740}
+              alt=""
+            />
           </div>
         </div>
       </div>

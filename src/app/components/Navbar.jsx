@@ -29,7 +29,7 @@ function Navbar() {
           
         </div> */}
       <nav
-        className={`h-auto py-2 lg:py-0 ${
+        className={`h-[10%] py-2 lg:py-0 ${
           pathname.length > 1
             ? "bg-white"
             : "  bg-gradient-to-br from-cyan-500 to-cyan-600"
