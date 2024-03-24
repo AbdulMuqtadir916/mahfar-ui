@@ -50,75 +50,79 @@ const Main = () => {
 
       {/* Nav Completed */}
 
-      <div className="mt-[35px] p-[20px] md:p-[30px] lg:p-[50px] w-full rounded-xl border border-zinc-300  flex flex-col md:items-center lg:flex-row gap-0 lg:gap-[45px] xl:gap-[25px]">
-        <div className="lg:w-[60%] m-auto">
-          <Image
-            className="w-auto h-auto mb-[35px]"
-            src={selectedItem.url}
-            width="478"
-            height="318"
-            alt=""
-          />
-        </div>
-        <div className="lg:w-[40%]">
-          <div className="flex flex-col gap-[15px] justify-between">
-            <div className="text-slate-900 text-[22px] lg:text-[31px] font-semibold ">
-              Metal Shingles
-            </div>
-            <div className="  rounded-lg justify-start items-start flex flex-wrap gap-[15px]">
-              <div className="grow px-[4px] shrink cursor-pointer h-11  py-2.5 bg-cyan-500 rounded-lg shadow border border-cyan-500 justify-center items-center gap-2 flex">
-                <div className="text-white text-base font-semibold text-center leading-none">
-                  Get Quote
-                </div>
-              </div>
-              <div className="grow px-[4px] shrink cursor-pointer h-11  py-2.5 bg-white  rounded-lg shadow border border-[#D0D5DD] text-black justify-center items-center gap-2 flex">
-                <div className="text-black text-base flex items-center gap-2 font-semibold  leading-normal">
-                  <span>
-                    <Image
-                      className="w-auto h-auto"
-                      height="20"
-                      alt="downloadIcon"
-                      width="20"
-                      src="/downloadIcon.svg"
-                    />
-                  </span>{" "}
-                  Download Broucher
-                </div>
-              </div>
-            </div>
+      <div className="mt-[35px] p-[20px] md:p-[30px] lg:p-[50px] w-full rounded-xl border border-zinc-300 ">
+        <div className="flex flex-wrap gap-[15px] justify-between">
+          <div className="text-slate-900 text-[22px] lg:text-[31px] font-semibold ">
+            Metal Shingles
           </div>
-
-          <div className="text-slate-900 text-[20px] md:text-[22px] font-medium mt-[36px]">
-            Select Colour
-          </div>
-          {/* More Main */}
-          <div
-            className={`flex gap-[20px] justify-center md:gap-[10px] lg:gap-[16px] flex-wrap mt-[20px] `}
-          >
-            {colors.map((e, i) => (
-              <div
-                key={i}
-                className="flex flex-col cursor-pointer items-center "
+          <div className="  rounded-lg justify-start items-start flex flex-wrap gap-[15px]">
+            <div className="grow px-[10px] shrink cursor-pointer h-11  py-2.5 bg-cyan-500 rounded-lg shadow border border-cyan-500 justify-center items-center gap-2 flex">
+              <a
+                href="https://wa.me/8008897556?text=I%27m+interested+in+your+car+for+sale" rel="noopener ugc nofollow" target="_blank"
+                className="text-white text-base font-semibold text-center leading-none"
               >
-                <div>
+                Get Quote
+              </a>
+            </div>
+            <div className="grow px-[10px] shrink cursor-pointer h-11  py-2.5 bg-white  rounded-lg shadow border border-[#D0D5DD] text-black justify-center items-center gap-2 flex">
+              <div className="text-black text-base flex items-center gap-2 font-semibold  leading-normal">
+                <span>
                   <Image
-                    priority={false}
-                    onClick={() => {
-                      setSelectedItem(e);
-                    }}
-                    className={`w-[90px] h-[75px] rounded-lg ${
-                      e.url == selectedItem.url
-                        ? "border-[#00a8cf8a]  border-4  shadow-md shadow-[#00000040]"
-                        : ""
-                    }`}
-                    src={e.url}
-                    width="90"
-                    height="75"
-                    alt=""
+                    className="w-auto h-auto"
+                    height="20"
+                    alt="downloadIcon"
+                    width="20"
+                    src="/downloadIcon.svg"
                   />
-                </div>
+                </span>{" "}
+                Download Broucher
               </div>
-            ))}
+            </div>
+          </div>
+        </div>
+        <div className="mt-[50px] flex flex-col md:items-center lg:flex-row gap-0 lg:gap-[45px] xl:gap-[25px]">
+          <div className="lg:w-[60%] m-auto">
+            <Image
+              className="w-auto h-auto mb-[35px]"
+              src={selectedItem.url}
+              width="478"
+              height="318"
+              alt=""
+            />
+          </div>
+          <div className="lg:w-[40%]">
+            <div className="text-slate-900 text-[20px] md:text-[22px] font-medium ">
+              Select Colour
+            </div>
+            {/* More Main */}
+            <div
+              className={`flex gap-[20px] justify-center md:gap-[10px] lg:gap-[16px] flex-wrap mt-[20px] `}
+            >
+              {colors.map((e, i) => (
+                <div
+                  key={i}
+                  className="flex flex-col cursor-pointer items-center "
+                >
+                  <div>
+                    <Image
+                      priority={false}
+                      onClick={() => {
+                        setSelectedItem(e);
+                      }}
+                      className={`w-[90px] h-[75px] rounded-lg ${
+                        e.url == selectedItem.url
+                          ? "border-[#00a8cf8a]  border-4  shadow-md shadow-[#00000040]"
+                          : ""
+                      }`}
+                      src={e.url}
+                      width="90"
+                      height="75"
+                      alt=""
+                    />
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>
