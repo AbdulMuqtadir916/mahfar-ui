@@ -44,14 +44,13 @@ const Main = () => {
     { url: `/Roofing/${pathname}/Roofng17.jpg` },
     { url: `/Roofing/${pathname}/Roofng18.jpg` },
   ];
+
   return (
     <div className="px-[7vw] xl:px-[10vw] 2xl:px-[10vw] w-full">
-      <ProdNavbar navBar={navBar} />
-
       {/* Nav Completed */}
 
       <div className="mt-[35px] p-[20px] md:p-[30px] lg:p-[50px] w-full rounded-xl border border-zinc-300 ">
-        <div className="flex flex-wrap gap-[15px] justify-between">
+        <div className="flex mb-[30px] flex-wrap gap-[15px] justify-between">
           <div className="text-slate-900 text-[22px] lg:text-[31px] font-semibold ">
             Metal Shingles
           </div>
@@ -82,6 +81,18 @@ const Main = () => {
             </div>
           </div>
         </div>
+        <div className="sticky top-[75.5px] lg:top-[93.9px] z-20 bg-white">
+          <ProdNavbar navBar={navBar} />
+        </div>
+        <div className="flex items-center justify-center mt-[40px]">
+          <Image
+            className="w-auto h-auto "
+            src={`/Roofing/${pathname}/RoofngSheet1.jpg`}
+            width="350"
+            height="350"
+            alt=""
+          />
+        </div>
         <div className="mt-[50px] flex flex-col md:items-center lg:flex-row gap-0 lg:gap-[45px] xl:gap-[25px]">
           <div className="lg:w-[60%] m-auto">
             <Image
@@ -111,7 +122,7 @@ const Main = () => {
                       onClick={() => {
                         setSelectedItem(e);
                       }}
-                      className={`w-[90px] h-[75px] rounded-lg ${
+                      className={`w-[90px] h-[75px] rounded-lg hover:border-4 hover:border-[#00a9cfe5] ${
                         e.url == selectedItem.url
                           ? "border-[#00a8cf8a]  border-4  shadow-md shadow-[#00000040]"
                           : ""
