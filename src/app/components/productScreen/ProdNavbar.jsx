@@ -6,13 +6,19 @@ import React from "react";
 
 const ProdNavbar = ({ navBar, navColor }) => {
   const pName = usePathname();
-//   console.log("pName", pName);
+  //   console.log("pName", pName);
   const productName = pName.split("/")[2];
   const pathname = pName.split("/").pop();
-//   console.log("pathname", pathname);
+  //   console.log("pathname", pathname);
   return (
-    <div className={` mt-[10px] w-full ${navColor?"":"border-b border-zinc-300"} justify-start items-start inline-flex relative overflow-x-auto`}>
-      <div className=" flex">
+    <div
+      className={` mt-[10px] w-full ${
+        navColor ? "" : "border-b border-zinc-300"
+      } justify-start items-start inline-flex relative overflow-x-auto`}
+    >
+      <div
+        className={` flex justify-evenly w-full`}
+      >
         {navBar.map((e, i) => (
           <Link key={i} href={`/product/${productName}/${e.pathUrl}`}>
             <div
@@ -21,11 +27,14 @@ const ProdNavbar = ({ navBar, navColor }) => {
               }`}
             >
               <div
-                className={`${
-                  navColor
-                    ? "text-white group-hover:text-cyan-400"
-                    : "text-cyan-500"
-                }  text-lg font-medium `}
+                className={`
+                ${navColor?"text-white":( pathname === e.pathUrl )
+                ? "text-cyan-500 group-hover:text-cyan-400"
+                : "group-hover:text-cyan-400 text-[#1f2937]"}
+                
+                
+                
+                  text-lg font-medium `}
               >
                 {e.name}
               </div>

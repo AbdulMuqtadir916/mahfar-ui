@@ -81,15 +81,29 @@ const Main = () => {
             </div>
           </div>
         </div>
-        <div className="sticky top-[75.5px] lg:top-[93.9px] z-20 bg-white">
+        <div className="sticky top-[12.5vw] sm:top-[12vw] md:top-[9vw] lg:top-[93.9px] z-20 backdrop-blur-md bg-[#fffffff2]">
           <ProdNavbar navBar={navBar} />
         </div>
-        <div className="flex items-center justify-center mt-[40px]">
+        <div className="grid grid-cols-2 items-center gap-[15px] justify-items-center justify-center mt-[40px] sm:w-[500px] lg:w-full sm:m-auto lg:m-0 lg:mt-[40px] lg:ml-[40px]">
           <Image
-            className="w-auto h-auto "
+            className="w-full col-span-2 lg:col-span-1 lg:row-span-2 h-auto "
             src={`/Roofing/${pathname}/RoofngSheet1.jpg`}
             width="350"
             height="350"
+            alt=""
+          />
+          <Image
+            className="w-full h-full md:w-[100%] lg:w-[250px] "
+            src={`/Roofing/${pathname}/RoofngSheet2.jpg`}
+            width="250"
+            height="250"
+            alt=""
+          />
+          <Image
+            className=" w-full h-full md:w-[100%] lg:w-[250px] "
+            src={`/Roofing/${pathname}/RoofngSheet3.jpg`}
+            width="250"
+            height="250"
             alt=""
           />
         </div>

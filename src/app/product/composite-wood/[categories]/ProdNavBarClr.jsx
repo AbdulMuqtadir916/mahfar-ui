@@ -34,8 +34,8 @@ const ProdNavBarClr = () => {
   ];
   return (
     <div
-      className={`w-[100%] px-[7vw] xl:px-[10vw] 2xl:px-[10vw] sticky top-[12.5vw] sm:top-[12vw] md:top-[9vw] lg:top-[93.9px] z-20 ${
-        navColor ? "bg-[#344054] text-white" : "bg-white"
+      className={`w-[100%] px-[7vw] xl:px-[10vw] 2xl:px-[10vw] sticky top-[12.5vw] sm:top-[12vw] md:top-[9vw] lg:top-[93.9px] z-20 backdrop-blur-md ${
+        navColor ? "bg-[#344054eb] text-white" : "bg-white"
       }`}
     >
       <ProdNavbar navBar={navBar} navColor={navColor} />
