@@ -47,26 +47,31 @@ const Main = () => {
 
   return (
     <div className="px-[7vw] xl:px-[10vw] 2xl:px-[10vw] w-full">
-      {/* Nav Completed */}
-
-      <div className="mt-[35px] p-[20px] md:p-[30px] lg:p-[50px] w-full rounded-xl border border-zinc-300 ">
-        <div className="flex mb-[30px] flex-wrap gap-[15px] justify-between">
+      {/* Metal Shingles */}
+      <div className="mt-[35px]  p-[20px] md:p-[30px] lg:p-[50px] w-full rounded-xl border border-zinc-300 ">
+        <div className="flex mb-[30px] items-center flex-wrap gap-[15px] justify-between">
           <div className="text-slate-900 text-[22px] lg:text-[31px] font-semibold ">
             Metal Shingles
           </div>
           <div className="  rounded-lg justify-start items-start flex flex-wrap gap-[15px]">
-            <div className="grow px-[10px] shrink cursor-pointer h-11  py-2.5 bg-cyan-500 rounded-lg shadow border border-cyan-500 justify-center items-center gap-2 flex">
+            <a
+              href="https://wa.me/97337778311?text=I%27m+interested+in+Metal+Shingles+Roofing+Solution"
+              rel="noopener ugc nofollow"
+              target="_blank"
+              className="grow px-[10px] shrink  h-11  py-2.5  rounded-lg shadow border  justify-center items-center gap-2 flex bg-[#00A8CF] text-white border-[#00A8CF] hover:bg-white hover:text-[#00A8CF]
+                 
+                transition duration-300 ease-in select-none 
+                cursor-pointer
+                text-base font-semibold text-center leading-none"
+            >
+              Get Quote
+            </a>
+            <div className="grow px-[10px] shrink cursor-pointer h-11  py-2.5 bg-white  rounded-lg shadow border border-[#D0D5DD] text-black justify-center items-center gap-2 flex hover:bg-[#f5f5f5] leading-normal transition duration-300 ease-in select-none">
               <a
-                href="https://wa.me/97337778311?text=I%27m+interested+in+Metal+Shingle+Roofing+Solution"
-                rel="noopener ugc nofollow"
-                target="_blank"
-                className="text-white text-base font-semibold text-center leading-none"
+                href="/Mahfar-broucher.pdf"
+                download
+                className="text-black text-base flex items-center gap-2 font-semibold  "
               >
-                Get Quote
-              </a>
-            </div>
-            <div className="grow px-[10px] shrink cursor-pointer h-11  py-2.5 bg-white  rounded-lg shadow border border-[#D0D5DD] text-black justify-center items-center gap-2 flex">
-              <div className="text-black text-base flex items-center gap-2 font-semibold  leading-normal">
                 <span>
                   <Image
                     className="w-auto h-auto"
@@ -77,7 +82,7 @@ const Main = () => {
                   />
                 </span>{" "}
                 Download Broucher
-              </div>
+              </a>
             </div>
           </div>
         </div>
@@ -150,6 +155,77 @@ const Main = () => {
                 </div>
               ))}
             </div>
+          </div>
+        </div>
+      </div>
+      {/* Sandwich Panels */}
+      <div className="mt-[35px]  p-[20px] md:p-[30px] lg:p-[50px] w-full rounded-xl border border-zinc-300 ">
+        <div className="flex mb-[30px] items-center flex-wrap gap-[15px] justify-between">
+          <div className="text-slate-900 text-[22px] lg:text-[31px] font-semibold ">
+            Sandwich Panels
+          </div>
+          <div className="  rounded-lg justify-start items-start flex flex-wrap gap-[15px]">
+            <a
+              href="https://wa.me/97337778311?text=I%27m+interested+in+Sandwich+Panels+Roofing+Solution"
+              rel="noopener ugc nofollow"
+              target="_blank"
+              className="grow px-[10px] shrink  h-11  py-2.5  rounded-lg shadow border  justify-center items-center gap-2 flex bg-[#00A8CF] text-white border-[#00A8CF] hover:bg-white hover:text-[#00A8CF]
+                 
+                transition duration-300 ease-in select-none 
+                cursor-pointer
+                text-base font-semibold text-center leading-none"
+            >
+              Get Quote
+            </a>
+            <div className="grow px-[10px] shrink cursor-pointer h-11  py-2.5 bg-white  rounded-lg shadow border border-[#D0D5DD] text-black justify-center items-center gap-2 flex hover:bg-[#f5f5f5]  leading-normal transition duration-300 ease-in select-none">
+              <a
+                href="/Mahfar-broucher.pdf"
+                download
+                className="text-black text-base flex items-center gap-2 font-semibold  leading-normal"
+              >
+                <span>
+                  <Image
+                    className="w-auto h-auto"
+                    height="20"
+                    alt="downloadIcon"
+                    width="20"
+                    src="/downloadIcon.svg"
+                  />
+                </span>{" "}
+                Download Broucher
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div className="mt-[50px] flex flex-col md:items-center lg:flex-row gap-0 lg:gap-[45px] xl:gap-[25px]">
+          <div
+            className={`flex gap-[10px] justify-center md:gap-[10px] lg:gap-[10px] flex-wrap  `}
+          >
+            <Image
+              src="/Roofing/sandwich_panels/emar1.jpeg"
+              width="252"
+              height="252"
+              alt=""
+            />
+            <Image
+              src="/Roofing/sandwich_panels/emar2.jpeg"
+              width="252"
+              height="252"
+              alt=""
+            />
+            <Image
+              src="/Roofing/sandwich_panels/emar3.jpeg"
+              width="252"
+              height="252"
+              alt=""
+            />
+            <Image
+              src="/Roofing/sandwich_panels/emar4.jpeg"
+              width="252"
+              height="252"
+              alt=""
+            />
           </div>
         </div>
       </div>

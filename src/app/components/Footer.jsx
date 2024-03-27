@@ -49,14 +49,58 @@ function Footer() {
           <div className=" text-cyan-500 text-[17px] font-normal ">
             Products
           </div>
-          <div className="text-white text-[15px] font-normal ">
-            Email Marketing
-          </div>
-          <div className="text-white text-[15px] font-normal ">Campaigns</div>
-          <div className="text-white text-[15px] font-normal ">Branding</div>
-          <div className=" text-white text-[15px] font-normal ">Offline</div>
+          <Link href="/product/roofing-solution/classic">
+            <div className="text-white hover:text-cyan-500 text-[15px] font-normal ">
+              Roofing Solution
+            </div>
+          </Link>
+          <Link href="/product/composite-wood/decking">
+            <div className="text-white  hover:text-cyan-500 text-[15px] font-normal ">
+              Composite Wood
+            </div>
+          </Link>
+          <Link href="/product/thermal-insulation">
+            <div className="text-white  hover:text-cyan-500 text-[15px] font-normal ">
+              Thermal Insulation
+            </div>
+          </Link>
+          <Link href="/product/acoustic-insulation">
+            <div className=" text-white hover:text-cyan-500  text-[15px] font-normal ">
+              Acostic Insulation
+            </div>
+          </Link>
+          <Link href="/product/water-proofing">
+            <div className=" text-white hover:text-cyan-500 text-[15px] font-normal ">
+              Water Proofing
+            </div>
+          </Link>
         </div>
         <div className="flex flex-col gap-[15px]">
+          <div className=" text-cyan-500 text-[17px] hover:text-cyan-500 font-normal ">
+            Pages
+          </div>
+          <Link href="/">
+            <div className="text-white text-[15px] hover:text-cyan-500 font-normal ">
+              Home
+            </div>
+          </Link>
+          <Link href="/prodcuts">
+            <div className="  text-white text-[15px] font-normal ">
+              Products
+            </div>
+          </Link>
+          <Link href="/about-us">
+            <div className="text-white text-[15px] hover:text-cyan-500 font-normal ">
+              About
+            </div>
+          </Link>
+          <Link href="/contact-us">
+            <div className=" text-white hover:text-cyan-500 text-[15px] font-normal ">
+              Contact
+            </div>
+          </Link>
+        </div>
+        {/* <div className="flex flex-col gap-[15px]">
           <div className=" text-cyan-500 text-[17px] font-normal ">
             Services
           </div>
@@ -64,20 +108,23 @@ function Footer() {
           <div className="  text-white text-[15px] font-normal ">Benefits</div>
           <div className="text-white text-[15px] font-normal ">Team</div>
           <div className=" text-white text-[15px] font-normal ">Careers</div>
-        </div>
+        </div> */}
         <div className="flex flex-col gap-[15px]">
-          <div className=" text-cyan-500 text-[17px] font-normal ">
-            About Us
-          </div>
-          <div className="text-white text-[15px] font-normal ">Contact Us</div>
+          <Link href="/about-us">
+            <div className=" text-cyan-500 text-[17px] font-normal ">
+              About Us
+            </div>
+          </Link>
+          <Link href="/contact-us">
+            <div className="text-white hover:text-cyan-500 text-[15px] font-normal ">
+              Contact Us
+            </div>
+          </Link>
         </div>
       </div>
 
       <div className="left-0  flex gap-4 text-white text-[15px] font-normal ">
-        <div className=" ">
-            
-          Terms & Conditions
-        </div>
+        <div className=" ">Terms & Conditions</div>
 
         <div> Privacy Policy</div>
         <div className="w-[133.96px] h-[22px] ">

@@ -4,9 +4,12 @@ import Link from "next/link";
 
 function ProductsAndServices() {
   return (
-    <div className="px-[7vw] xl:px-[10vw] 2xl:px-[10vw] pt-28 w-full pb-[139px] bg-white">
+    <div className="px-[7vw] xl:px-[10vw] 2xl:px-[10vw] pt-28 w-full pb-[49px] bg-white">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 pb-[117px] gap-[30px]">
-        <div className="group cursor-pointer w-auto lg:h-[270px] flex-col justify-start items-start gap-3 inline-flex">
+        <Link
+          href="/product"
+          className="group cursor-pointer w-auto lg:h-[270px] flex-col justify-start items-start gap-3 inline-flex"
+        >
           <div className="leading-[46px]">
             <span className="text-zinc-800 text-[42px] font-normal ">
               Our Extensive <br />
@@ -26,8 +29,8 @@ function ProductsAndServices() {
               ></Image>
             </div>
           </div>
-        </div>
-        <Link className="" href="/product/roofing-solution/classic">
+        </Link>
+        <Link href="/product/roofing-solution/classic">
           <div
             className='group w-auto h-[270px] sm:h-[442px]
         transition duration-700 ease-in-out hover:scale-105 cursor-pointer md:h-[270px] p-3.5 rounded-xl border border-stone-300 flex-col justify-start items-center gap-2.5 inline-flex" '
@@ -54,59 +57,9 @@ function ProductsAndServices() {
             </div>
           </div>
         </Link>
-        <div
-          className='w-auto h-[270px] sm:h-[442px]
-        transition duration-700 ease-in-out hover:scale-105 cursor-pointer md:h-[270px] p-3.5 rounded-xl border border-stone-300 flex-col justify-start items-center gap-2.5 inline-flex" '
-        >
-          <Image
-            className="w-full h-[200px] sm:h-[378px] md:h-[200px]"
-            alt="roofing"
-            src="/thermalInsulation.svg"
-            width="0"
-            height="0"
-          />
-          <div className=" h-[42px]  pt-[6px] justify-between hover:duration-700 duration-700 mr-[20px] hover:mr-[0px] hover:ease-in-out cursor-pointer items-center flex">
-            <div className="text-zinc-800 text-[22px]  ">
-              Thermal Insulation
-            </div>
-            <div className="w-[42px] hover:duration-700 duration-700 hover:ease-in-out cursor-pointer h-[42px] relative ">
-              <Image
-                alt="arrow"
-                src="/icon-arrow-narrow-right.svg"
-                height={42}
-                width={42}
-              ></Image>
-            </div>
-          </div>
-        </div>
-        <div
-          className='w-auto h-[270px] sm:h-[442px]
-        transition duration-700 ease-in-out hover:scale-105 cursor-pointer md:h-[270px] p-3.5 rounded-xl border border-stone-300 flex-col justify-start items-center gap-2.5 inline-flex" '
-        >
-          <Image
-            className="w-full h-[200px] sm:h-[378px] md:h-[200px]"
-            alt="roofing"
-            src="/AcoustucInsul.svg"
-            width="0"
-            height="0"
-          />
-          <div className=" h-[42px]  pt-[6px] justify-between hover:duration-700 duration-700 mr-[20px] hover:mr-[0px] hover:ease-in-out cursor-pointer items-center flex">
-            <div className="text-zinc-800 text-[22px]  ">
-              Acoustic Insulation
-            </div>
-            <div className="w-[42px] hover:duration-700 duration-700 hover:ease-in-out cursor-pointer h-[42px] relative ">
-              <Image
-                alt="arrow"
-                src="/icon-arrow-narrow-right.svg"
-                height={42}
-                width={42}
-              ></Image>
-            </div>
-          </div>
-        </div>
-        <Link className="" href="/product/composite-wood/decking">
+        <Link  href="/product/composite-wood/decking">
           <div
-            className='w-auto h-[270px] sm:h-[442px]
+            className=' group w-auto h-[270px] sm:h-[442px]
         transition duration-700 ease-in-out hover:scale-105 cursor-pointer md:h-[270px] p-3.5 rounded-xl border border-stone-300 flex-col justify-start items-center gap-2.5 inline-flex" '
           >
             <Image
@@ -116,7 +69,7 @@ function ProductsAndServices() {
               width="0"
               height="0"
             />
-            <div className=" h-[42px]  pt-[6px] justify-between hover:duration-700 duration-700 mr-[20px] hover:mr-[0px] hover:ease-in-out cursor-pointer items-center flex">
+            <div className=" h-[42px]  pt-[6px] justify-between group-hover:duration-700 duration-700 mr-[20px] group-hover:mr-[0px] group-hover:ease-in-out cursor-pointer items-center flex">
               <div className="text-zinc-800 text-[22px]  ">Composite Wood</div>
               <div className="w-[42px] hover:duration-700 duration-700 hover:ease-in-out cursor-pointer h-[42px] relative ">
                 <Image
@@ -129,33 +82,89 @@ function ProductsAndServices() {
             </div>
           </div>
         </Link>
-        <div
-          className='w-auto h-[270px] sm:h-[442px]
+        <Link href="/product/thermal-insulation">
+          <div
+            className='group w-auto h-[270px] sm:h-[442px]
         transition duration-700 ease-in-out hover:scale-105 cursor-pointer md:h-[270px] p-3.5 rounded-xl border border-stone-300 flex-col justify-start items-center gap-2.5 inline-flex" '
-        >
-          <Image
-            className="w-full h-[200px] sm:h-[378px] md:h-[200px]"
-            alt="roofing"
-            src="/waterProofing.svg"
-            width="0"
-            height="0"
-          />
-          <div className=" h-[42px]  pt-[6px] justify-between hover:duration-700 duration-700 mr-[20px] hover:mr-[0px] hover:ease-in-out cursor-pointer items-center flex">
-            <div className="text-zinc-800 text-[22px]  ">Water Proofing</div>
-            <div className="w-[42px] hover:duration-700 duration-700 hover:ease-in-out cursor-pointer h-[42px] relative ">
-              <Image
-                alt="arrow"
-                src="/icon-arrow-narrow-right.svg"
-                height={42}
-                width={42}
-              ></Image>
+          >
+            <Image
+              className="w-full h-[200px] sm:h-[378px] md:h-[200px]"
+              alt="roofing"
+              src="/thermalInsulation.svg"
+              width="0"
+              height="0"
+            />
+            <div className=" h-[42px]  pt-[6px] justify-between group-hover:duration-700 duration-700 mr-[20px] group-hover:mr-[0px] group-hover:ease-in-out cursor-pointer items-center flex">
+              <div className="text-zinc-800 text-[22px]  ">
+                Thermal Insulation
+              </div>
+              <div className="w-[42px] hover:duration-700 duration-700 hover:ease-in-out cursor-pointer h-[42px] relative ">
+                <Image
+                  alt="arrow"
+                  src="/icon-arrow-narrow-right.svg"
+                  height={42}
+                  width={42}
+                ></Image>
+              </div>
             </div>
           </div>
-        </div>
+        </Link>
+        <Link href="/product/acoustic-insulation">
+          <div
+            className='group w-auto h-[270px] sm:h-[442px]
+        transition duration-700 ease-in-out hover:scale-105 cursor-pointer md:h-[270px] p-3.5 rounded-xl border border-stone-300 flex-col justify-start items-center gap-2.5 inline-flex" '
+          >
+            <Image
+              className="w-full h-[200px] sm:h-[378px] md:h-[200px]"
+              alt="roofing"
+              src="/AcoustucInsul.svg"
+              width="0"
+              height="0"
+            />
+            <div className=" h-[42px]  pt-[6px] justify-between group-hover:duration-700 duration-700 mr-[20px] group-hover:mr-[0px] group-hover:ease-in-out cursor-pointer items-center flex">
+              <div className="text-zinc-800 text-[22px]  ">
+                Acoustic Insulation
+              </div>
+              <div className="w-[42px] hover:duration-700 duration-700 hover:ease-in-out cursor-pointer h-[42px] relative ">
+                <Image
+                  alt="arrow"
+                  src="/icon-arrow-narrow-right.svg"
+                  height={42}
+                  width={42}
+                ></Image>
+              </div>
+            </div>
+          </div>
+        </Link>
+        <Link href="/product/water-proofing">
+          <div
+            className='group w-auto h-[270px] sm:h-[442px]
+        transition duration-700 ease-in-out hover:scale-105 cursor-pointer md:h-[270px] p-3.5 rounded-xl border border-stone-300 flex-col justify-start items-center gap-2.5 inline-flex" '
+          >
+            <Image
+              className="w-full h-[200px] sm:h-[378px] md:h-[200px]"
+              alt="roofing"
+              src="/waterProofing.svg"
+              width="0"
+              height="0"
+            />
+            <div className=" h-[42px]  pt-[6px] justify-between group-hover:duration-700 duration-700 mr-[20px] group-hover:mr-[0px] group-hover:ease-in-out cursor-pointer items-center flex">
+              <div className="text-zinc-800 text-[22px]  ">Water Proofing</div>
+              <div className="w-[42px] hover:duration-700 duration-700 hover:ease-in-out cursor-pointer h-[42px] relative ">
+                <Image
+                  alt="arrow"
+                  src="/icon-arrow-narrow-right.svg"
+                  height={42}
+                  width={42}
+                ></Image>
+              </div>
+            </div>
+          </div>
+        </Link>
       </div>
 
       {/* ********Services******** */}
-      <div>
+      {/* <div>
         <div className="pb-[46px]">
           <span className="text-zinc-800 text-[42px] font-normal ">
             Our Extensive{" "}
@@ -253,7 +262,7 @@ function ProductsAndServices() {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }

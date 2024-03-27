@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const HeroSec = ({ productName, productDetail, productImage }) => {
   console.log("productName", productName);
@@ -17,18 +18,32 @@ const HeroSec = ({ productName, productDetail, productImage }) => {
             </div>
             <div className="justify-start items-start gap-8 inline-flex">
               <div className="h-11 rounded-lg justify-start items-start flex">
-                <div className="grow shrink basis-0 h-11 px-[18px] py-2.5 bg-cyan-500 rounded-lg shadow border border-cyan-500 justify-center items-center gap-2 flex">
-                  <div className="text-white text-base font-semibold   leading-normal">
-                    Get Quote
-                  </div>
-                </div>
+                <a
+                  href={`https://wa.me/97337778311?text=I%27m+looking+for+${productName}`}
+                  rel="noopener ugc nofollow"
+                  target="_blank"
+                  className="grow shrink basis-0 h-11 px-[18px] py-2.5 rounded-lg shadow border justify-center items-center gap-2 flex
+                bg-[#00A8CF] text-white border-[#00A8CF] hover:bg-white hover:text-[rgb(0,168,207)]
+                text-base font-semibold  
+                transition duration-300 ease-in select-none 
+                cursor-pointer"
+                >
+                  Get Quote
+                </a>
               </div>
               <div className="h-11 rounded-lg justify-start items-start flex">
-                <div className="grow shrink basis-0 h-11 px-[18px] py-2.5 bg-cyan-500 bg-opacity-10 rounded-lg shadow border border-cyan-500 border-opacity-10 justify-center items-center gap-2 flex">
-                  <div className="text-cyan-500 text-base font-semibold   leading-normal">
-                    Inquire Now
-                  </div>
-                </div>
+                <Link
+                  href="/contact-us"
+                  className="grow shrink basis-0 h-11 px-[18px] py-2.5 bg-opacity-10 rounded-lg shadow border border-opacity-10 justify-center items-center gap-2 flex 
+                   text-base font-semibold   leading-normal
+                  bg-cyan-500  text-cyan-500 border-cyan-500  hover:bg-white hover:text-[rgb(0,168,207)
+      ]
+                   transition duration-300 ease-in select-none 
+                   cursor-pointer
+                  "
+                >
+                  Inquire Now
+                </Link>
               </div>
             </div>
           </div>

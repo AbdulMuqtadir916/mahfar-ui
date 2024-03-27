@@ -30,16 +30,16 @@ function BrandPatners() {
             height="0"
           ></Image>
         </div>
-        <div className="w-auto h-[79px] bg-zinc-100 rounded-md p-5">
+        {/* <div className="w-auto h-[79px] bg-zinc-100 rounded-md p-5">
           
           <Image
-            className="w-full h-full"
+            className=""
             alt="brand-patner"
-            src="/brandPatners/Rectangle-1.svg"
-            width="0"
-            height="0"
+            src="/brandPatners/rec3.jpeg"
+            width="80"
+            height="40"
           ></Image>
-        </div>
+        </div> */}
         <div className="w-auto h-[79px] bg-zinc-100 rounded-md p-5">
           
           <Image

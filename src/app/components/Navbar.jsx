@@ -15,7 +15,7 @@ function Navbar() {
   const navMenu = [
     { path: "/", text: "Home" },
     { path: "/products", text: "Products" },
-    { path: "/services", text: "Services" },
+    // { path: "/services", text: "Services" },
     { path: "/about-us", text: "About Us" },
     { path: "/contact-us", text: "Conatct Us" },
   ];

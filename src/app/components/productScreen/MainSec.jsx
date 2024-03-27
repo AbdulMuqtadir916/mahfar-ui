@@ -26,11 +26,19 @@ const MainSec = () => {
           outdoor flooring solution.
         </p>
         <div className="mt-6 w-[85%] md:w-[50%] lg:w-[40%] rounded-lg justify-start items-start flex flex-wrap gap-[15px]">
-          <div className="grow px-[4px] shrink cursor-pointer h-11  py-2.5 bg-cyan-500 rounded-lg shadow border border-cyan-500 justify-center items-center gap-2 flex">
-            <div className="text-white text-base font-semibold text-center leading-none">
-              Get Quote
-            </div>
-          </div>
+          <a
+            href={`https://wa.me/97337778311?text=I%27m+interested+in+${categorie}`}
+            rel="noopener ugc nofollow"
+            target="_blank"
+            className="grow px-[4px] shrink  h-11  py-2.5 
+          rounded-lg shadow border  justify-center items-center gap-2 flex bg-[#00A8CF] text-white border-[#00A8CF] hover:bg-white hover:text-[#00A8CF]
+                 
+          transition duration-300 ease-in select-none 
+          cursor-pointer
+          text-base font-semibold text-center leading-none"
+          >
+            Get Quote
+          </a>
           <div className="grow px-[4px] shrink cursor-pointer h-11  py-2.5 bg-white  rounded-lg shadow border border-[#D0D5DD] text-black justify-center items-center gap-2 flex">
             <div className="text-black text-base flex items-center gap-2 font-semibold  leading-normal">
               <span>
