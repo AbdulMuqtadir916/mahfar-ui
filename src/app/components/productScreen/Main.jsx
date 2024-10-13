@@ -57,6 +57,7 @@ const Main = () => {
     { url: `/Roofing/${selectedMetalShinglesProduct}/Roofng16.jpg` },
     { url: `/Roofing/${selectedMetalShinglesProduct}/Roofng17.jpg` },
     { url: `/Roofing/${selectedMetalShinglesProduct}/Roofng18.jpg` },
+    
   ];
 
   // Function to handle product selection
