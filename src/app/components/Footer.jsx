@@ -1,3 +1,4 @@
+"use client"
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
@@ -49,27 +50,27 @@ function Footer() {
           <div className=" text-cyan-500 text-[17px] font-normal ">
             Products
           </div>
-          <Link href="/product/roofing-solution/classic">
+          <Link href="/products/roofing-solution/">
             <div className="text-white hover:text-cyan-500 text-[15px] font-normal ">
               Roofing Solution
             </div>
           </Link>
-          <Link href="/product/composite-wood/decking">
+          <Link href="/products/composite-wood/">
             <div className="text-white  hover:text-cyan-500 text-[15px] font-normal ">
               Composite Wood
             </div>
           </Link>
-          <Link href="/product/thermal-insulation">
+          <Link href="/products/thermal-insulation">
             <div className="text-white  hover:text-cyan-500 text-[15px] font-normal ">
               Thermal Insulation
             </div>
           </Link>
-          <Link href="/product/acoustic-insulation">
+          <Link href="/products/acoustic-insulation">
             <div className=" text-white hover:text-cyan-500  text-[15px] font-normal ">
               Acostic Insulation
             </div>
           </Link>
-          <Link href="/product/water-proofing">
+          <Link href="/products/water-proofing">
             <div className=" text-white hover:text-cyan-500 text-[15px] font-normal ">
               Water Proofing
             </div>

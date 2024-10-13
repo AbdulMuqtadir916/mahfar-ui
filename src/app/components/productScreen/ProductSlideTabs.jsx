@@ -1,20 +1,20 @@
-"use client";
+"use client"
 import React, { useRef, useState } from "react";
 import { motion } from "framer-motion";
 
-export const ProdNavbar = ({ prodNavBarList, selectedProduct, onSelect }) => {
+export const ProductSlideTabs = ({ metalShinglesNavBarList, selectedMetalShinglesProduct, onSelect }) => {
   return (
-    <div className="flex justify-center items-center">
+    <div className="">
       <SlideTabs 
-        prodNavBarList={prodNavBarList}
-        selectedProduct={selectedProduct}
+        metalShinglesNavBarList={metalShinglesNavBarList}
+        selectedMetalShinglesProduct={selectedMetalShinglesProduct}
         onSelect={onSelect}
       />
     </div>
   );
 };
 
-const SlideTabs = ({ prodNavBarList, selectedProduct, onSelect }) => {
+const SlideTabs = ({ metalShinglesNavBarList, selectedMetalShinglesProduct, onSelect }) => {
   const [position, setPosition] = useState({
     left: 0,
     width: 0,
@@ -29,14 +29,14 @@ const SlideTabs = ({ prodNavBarList, selectedProduct, onSelect }) => {
           opacity: 0,
         }));
       }}
-      className="relative z-2 flex w-fit max-w-full rounded-full border border-zinc-300 bg-white p-2 overflow-x-auto"
+      className="relative z-2 flex w-fit max-w-full rounded-full border border-zinc-300 bg-white p-1 overflow-x-auto"
     >
-      {prodNavBarList.map((tab) => (
+      {metalShinglesNavBarList.map((tab) => (
         <Tab 
           key={tab.id}
           setPosition={setPosition}
-          isSelected={selectedProduct === tab.prodName}
-          onClick={() => onSelect(tab.prodName)}
+          isSelected={selectedMetalShinglesProduct === tab.pathUrl}
+          onClick={() => onSelect(tab.pathUrl)}
         >
           {tab.name}
         </Tab>
@@ -65,7 +65,7 @@ const Tab = ({ children, setPosition, isSelected, onClick }) => {
           opacity: 1,
         });
       }}
-      className={`relative z-10 block cursor-pointer px-4 py-2 text-sm uppercase md:px-6 md:py-4 md:text-lg ${
+      className={`relative z-10 block cursor-pointer px-3 py-1.5 text-xs uppercase md:px-5 md:py-3 md:text-base ${
         isSelected ? 'text-white bg-[#00A8CF] rounded-full' : 'text-black'
       } whitespace-nowrap`}
     >
@@ -80,7 +80,7 @@ const Cursor = ({ position }) => {
       animate={{
         ...position,
       }}
-      className="absolute z-0 h-[36px] rounded-full bg-[#00A8CF] text-white md:h-[60px]"
+      className="absolute z-0 h-7 rounded-full bg-[#00A8CF] text-white md:h-12"
     />
   );
 };

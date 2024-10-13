@@ -7,7 +7,7 @@ function ProductsAndServices() {
     <div className="px-[7vw] xl:px-[10vw] 2xl:px-[10vw] pt-28 w-full pb-[49px] bg-white">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 pb-[117px] gap-[30px]">
         <Link
-          href="/product"
+          href="/products"
           className="group cursor-pointer w-auto lg:h-[270px] flex-col justify-start items-start gap-3 inline-flex"
         >
           <div className="leading-[46px]">
@@ -30,7 +30,7 @@ function ProductsAndServices() {
             </div>
           </div>
         </Link>
-        <Link href="/product/roofing-solution/classic">
+        <Link href="/products/roofing-solution/">
           <div
             className='group w-auto h-[270px] sm:h-[442px]
         transition duration-700 ease-in-out hover:scale-105 cursor-pointer md:h-[270px] p-3.5 rounded-xl border border-stone-300 flex-col justify-start items-center gap-2.5 inline-flex" '
@@ -57,7 +57,7 @@ function ProductsAndServices() {
             </div>
           </div>
         </Link>
-        <Link  href="/product/composite-wood/decking">
+        <Link href="/products/composite-wood/">
           <div
             className=' group w-auto h-[270px] sm:h-[442px]
         transition duration-700 ease-in-out hover:scale-105 cursor-pointer md:h-[270px] p-3.5 rounded-xl border border-stone-300 flex-col justify-start items-center gap-2.5 inline-flex" '
@@ -82,7 +82,7 @@ function ProductsAndServices() {
             </div>
           </div>
         </Link>
-        <Link href="/product/thermal-insulation">
+        <Link href="/products/thermal-insulation">
           <div
             className='group w-auto h-[270px] sm:h-[442px]
         transition duration-700 ease-in-out hover:scale-105 cursor-pointer md:h-[270px] p-3.5 rounded-xl border border-stone-300 flex-col justify-start items-center gap-2.5 inline-flex" '
@@ -109,7 +109,7 @@ function ProductsAndServices() {
             </div>
           </div>
         </Link>
-        <Link href="/product/acoustic-insulation">
+        <Link href="/products/acoustic-insulation">
           <div
             className='group w-auto h-[270px] sm:h-[442px]
         transition duration-700 ease-in-out hover:scale-105 cursor-pointer md:h-[270px] p-3.5 rounded-xl border border-stone-300 flex-col justify-start items-center gap-2.5 inline-flex" '
@@ -136,7 +136,7 @@ function ProductsAndServices() {
             </div>
           </div>
         </Link>
-        <Link href="/product/water-proofing">
+        <Link href="/products/water-proofing">
           <div
             className='group w-auto h-[270px] sm:h-[442px]
         transition duration-700 ease-in-out hover:scale-105 cursor-pointer md:h-[270px] p-3.5 rounded-xl border border-stone-300 flex-col justify-start items-center gap-2.5 inline-flex" '

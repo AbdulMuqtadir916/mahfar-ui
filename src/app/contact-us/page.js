@@ -1,3 +1,4 @@
+"use client"
 import React from 'react'
 import Address from './Address'
 import Contact from './Contact'

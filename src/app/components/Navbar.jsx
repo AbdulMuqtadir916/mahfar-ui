@@ -6,7 +6,7 @@ import { usePathname } from "next/navigation";
 
 function Navbar() {
   const pathname = usePathname();
-  console.log("pathname",pathname)
+  console.log("pathname", pathname);
   const [showMenu, setShowMenu] = useState(false);
   const onClickMenu = () => {
     setShowMenu(!showMenu);
@@ -40,25 +40,24 @@ function Navbar() {
             <Link href="/">
               {pathname === "/" ? (
                 <Image
-                priority={true}
-                className="  w-[28vw] h-[10vw] md:w-[20vw] md:h-[8vw] lg:w-[246px] lg:h-[56px]"
-                src="/logo1.svg"
-                alt="logo"
-                quality={100}
-                width={0}
-                height={0}
-              />
+                  priority={true}
+                  className="  w-[28vw] h-[10vw] md:w-[20vw] md:h-[8vw] lg:w-[246px] lg:h-[56px]"
+                  src="/logo1.svg"
+                  alt="logo"
+                  quality={100}
+                  width={0}
+                  height={0}
+                />
               ) : (
-               
                 <Image
-                priority={true}
-                className="  w-[28vw] h-[10vw] md:w-[20vw] md:h-[8vw] lg:w-[246px] lg:h-[56px]"
-                src="/logoC.svg"
-                alt="logo"
-                quality={100}
-                width={0}
-                height={0}
-              />
+                  priority={true}
+                  className="  w-[28vw] h-[10vw] md:w-[20vw] md:h-[8vw] lg:w-[246px] lg:h-[56px]"
+                  src="/logoC.svg"
+                  alt="logo"
+                  quality={100}
+                  width={0}
+                  height={0}
+                />
               )}
             </Link>
           </div>

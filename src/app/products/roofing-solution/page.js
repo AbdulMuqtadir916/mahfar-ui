@@ -12,7 +12,7 @@ const RoofingCategories = ({ categories }) => {
         <div >
             <HeroSec productName={"Roofing Solution"} productDetail={"Tile offers a unique elegance to any home, adding the beauty and style of Mediterranean Tile.A long-standing reputation established for its performance, longevity and versatility, Tile is an ideal alternative to traditional tile products."} productImage={"/roofSol.svg"} />
             <Main categories={categories} />
-            <Patners patner="Our Roofing Solution Patners" />
+            <Patners patner="Our Roofing Solution Partners" />
             <Project />
             
             <Assistence />

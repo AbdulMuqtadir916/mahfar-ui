@@ -8,7 +8,7 @@ function BrandPatners() {
     w-full pt-[95px] pb-[136px] "
     >
       <div className="text-[#019DC2] font-bold text-[6.3vw] sm:text-[5.3vw] md:text-[5vw] lg:text-[3.3vw] xl:text-[3vw] leading-[7vw] sm:leading-[6vw] lg:leading-[4vw] xl:leading-[3.8vw] pb-[32px]">
-        Our Brand Patners
+        Our Brand Partners
       </div>
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 justify-stretch gap-[30px]">
         <div className="w-auto h-[79px] bg-zinc-100 rounded-md p-5">

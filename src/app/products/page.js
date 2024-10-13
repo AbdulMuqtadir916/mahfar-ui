@@ -9,7 +9,7 @@ export default function Prodcut({ params }) {
     return (
         <div className="px-[7vw] xl:px-[10vw] 2xl:px-[10vw] pt-28 w-full pb-[59px] bg-white">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 pb-[117px] gap-[30px]">
-                <Link className="" href="/product/roofing-solution/classic">
+                <Link className="" href="/products/roofing-solution">
                     <div
                         className='group w-auto h-[270px] sm:h-[442px]
         transition duration-700 ease-in-out hover:scale-105 cursor-pointer md:h-[270px] p-3.5 rounded-xl border border-stone-300 flex-col justify-start items-center gap-2.5 inline-flex" '
@@ -86,7 +86,7 @@ export default function Prodcut({ params }) {
                         </div>
                     </div>
                 </div>
-                <Link className="" href="/product/composite-wood/decking">
+                <Link className="" href="/products/composite-wood/">
                     <div
                         className='w-auto h-[270px] sm:h-[442px]
         transition duration-700 ease-in-out hover:scale-105 cursor-pointer md:h-[270px] p-3.5 rounded-xl border border-stone-300 flex-col justify-start items-center gap-2.5 inline-flex" '
