@@ -2,19 +2,19 @@
 import React, { useRef, useState } from "react";
 import { motion } from "framer-motion";
 
-export const ProductSlideTabs = ({ metalShinglesNavBarList, selectedMetalShinglesProduct, onSelect }) => {
+export const ProductSlideTabs = ({ navBarList, selectedProduct, onSelect }) => {
   return (
     <div className="">
       <SlideTabs 
-        metalShinglesNavBarList={metalShinglesNavBarList}
-        selectedMetalShinglesProduct={selectedMetalShinglesProduct}
+        navBarList={navBarList}
+        selectedProduct={selectedProduct}
         onSelect={onSelect}
       />
     </div>
   );
 };
 
-const SlideTabs = ({ metalShinglesNavBarList, selectedMetalShinglesProduct, onSelect }) => {
+const SlideTabs = ({ navBarList, selectedProduct, onSelect }) => {
   const [position, setPosition] = useState({
     left: 0,
     width: 0,
@@ -31,11 +31,11 @@ const SlideTabs = ({ metalShinglesNavBarList, selectedMetalShinglesProduct, onSe
       }}
       className="relative z-2 flex w-fit max-w-full rounded-full border border-zinc-300 bg-white p-1 overflow-x-auto"
     >
-      {metalShinglesNavBarList.map((tab) => (
+      {navBarList.map((tab) => (
         <Tab 
           key={tab.id}
           setPosition={setPosition}
-          isSelected={selectedMetalShinglesProduct === tab.pathUrl}
+          isSelected={selectedProduct === tab.pathUrl}
           onClick={() => onSelect(tab.pathUrl)}
         >
           {tab.name}

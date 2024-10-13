@@ -86,7 +86,7 @@ const MainSec = () => {
                     src="/downloadIcon.svg"
                   />
                 </span>{" "}
-                Download Broucher
+                Download Brochure
               </div>
             </div>
           </div>
