@@ -1,4 +1,3 @@
-
 import { Inter } from 'next/font/google'
 import './globals.css'
 import Navbar from './components/Navbar'
@@ -22,6 +21,11 @@ export default function RootLayout({ children }) {
         <Navbar />
         {children}
         <Footer />
+        <div className="whatsapp-icon">
+          <a href="https://wa.me/97337778311" target="_blank" rel="noopener noreferrer">
+            <i className="fab fa-whatsapp"></i>
+          </a>
+        </div>
       </body>
     </html>
   )
