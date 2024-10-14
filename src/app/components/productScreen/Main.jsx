@@ -101,7 +101,7 @@ const Main = () => {
   return (
     <div className="px-[7vw] xl:px-[10vw] 2xl:px-[10vw] w-full">
       {/* Prod Navbar */}
-      <div className="sticky top-[18.5vw] sm:top-[12vw] md:top-[11vw] lg:top-[100.9px] my-5 z-20 backdrop-blur-md bg-[#fffffff2]">
+      <div style={{ scrollbarWidth: 'none' }} className="sticky top-[18.5vw] sm:top-[12vw] md:top-[11vw] lg:top-[100.9px] my-5 z-20 backdrop-blur-md bg-[#fffffff2]">
         {/* Pass the state and handler to ProdNavbar */}
         <ProdNavbar
           prodNavBarList={prodNavBarList}
@@ -153,7 +153,7 @@ const Main = () => {
             </div>
             {/* Navbar */}
 
-            <div className="sticky top-[12.5vw] sm:top-[12vw] md:top-[9vw] lg:top-[93.9px] z-20 bg-white py-2 overflow-x-auto">
+            <div style={{ scrollbarWidth: 'none' }} className="sticky top-[12.5vw] sm:top-[12vw] md:top-[9vw] lg:top-[93.9px] z-20 bg-white py-2 overflow-x-auto">
               {/* Pass the state and handler to ProdNavbar */}
               <ProductSlideTabs
                 navBarList={metalShinglesNavBarList}
@@ -291,7 +291,7 @@ const Main = () => {
             </div>
 
             {/* Navbar */}
-            <div className="sticky top-[12.5vw] sm:top-[12vw] md:top-[9vw] lg:top-[93.9px] z-20 bg-white py-2 overflow-x-auto">
+            <div style={{ scrollbarWidth: 'none' }} className="sticky top-[12.5vw] sm:top-[12vw] md:top-[9vw] lg:top-[93.9px] z-20 bg-white py-2 overflow-x-auto">
               {/* Pass the state and handler to ProdNavbar */}
               <ProductSlideTabs
                 navBarList={sandwichPanelNavBarList}
@@ -353,7 +353,7 @@ const Main = () => {
             </div>
 
             {/* Navbar */}
-            <div className="sticky top-[12.5vw] sm:top-[12vw] md:top-[9vw] lg:top-[93.9px] z-20 bg-white py-2 overflow-x-auto ">
+            <div style={{ scrollbarWidth: 'none' }} className="sticky top-[12.5vw] sm:top-[12vw] md:top-[9vw] lg:top-[93.9px] z-20 bg-white py-2 overflow-x-auto ">
               {/* Pass the state and handler to ProdNavbar */}
               <ProductSlideTabs
                 navBarList={formingProductNavBarList}

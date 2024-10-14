@@ -1,4 +1,3 @@
-
 'use client'
 
 import Image from "next/image"
@@ -7,136 +6,43 @@ import Link from "next/link"
 export default function Prodcut({ params }) {
     console.log(params)
     return (
-        <div className="px-[7vw] xl:px-[10vw] 2xl:px-[10vw] pt-28 w-full pb-[59px] bg-white">
+        <div className="px-[7vw] xl:px-[10vw] 2xl:px-[10vw] p-12 md:pt-20 w-full pb-[59px] bg-white">
+            <h1 className="text-3xl md:text-4xl font-bold mb-8 ">Our Products</h1>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 pb-[117px] gap-[30px]">
-                <Link className="" href="/products/roofing-solution">
-                    <div
-                        className='group w-auto h-[270px] sm:h-[442px]
-        transition duration-700 ease-in-out hover:scale-105 cursor-pointer md:h-[270px] p-3.5 rounded-xl border border-stone-300 flex-col justify-start items-center gap-2.5 inline-flex" '
-                    >
-                        <Image
-                            className="w-full h-[200px] sm:h-[378px] md:h-[200px]"
-                            alt="roofing"
-                            src="/roofSol.svg"
-                            width="0"
-                            height="0"
-                        />
-                        <div className=" h-[42px]  pt-[6px] justify-between group-hover:duration-700 duration-700 mr-[20px] group-hover:mr-[0px] group-hover:ease-in-out cursor-pointer items-center flex">
-                            <div className="text-zinc-800 text-[22px]  ">
-                                Roofing Solution
-                            </div>
-                            <div className="w-[42px]  cursor-pointer h-[42px] relative ">
-                                <Image
-                                    alt="arrow"
-                                    src="/icon-arrow-narrow-right.svg"
-                                    height={42}
-                                    width={42}
-                                ></Image>
-                            </div>
-                        </div>
-                    </div>
-                </Link>
-                <div
-                    className='w-auto h-[270px] sm:h-[442px]
-        transition duration-700 ease-in-out hover:scale-105 cursor-pointer md:h-[270px] p-3.5 rounded-xl border border-stone-300 flex-col justify-start items-center gap-2.5 inline-flex" '
-                >
-                    <Image
-                        className="w-full h-[200px] sm:h-[378px] md:h-[200px]"
-                        alt="roofing"
-                        src="/thermalInsulation.svg"
-                        width="0"
-                        height="0"
-                    />
-                    <div className=" h-[42px]  pt-[6px] justify-between hover:duration-700 duration-700 mr-[20px] hover:mr-[0px] hover:ease-in-out cursor-pointer items-center flex">
-                        <div className="text-zinc-800 text-[22px]  ">
-                            Thermal Insulation
-                        </div>
-                        <div className="w-[42px] hover:duration-700 duration-700 hover:ease-in-out cursor-pointer h-[42px] relative ">
-                            <Image
-                                alt="arrow"
-                                src="/icon-arrow-narrow-right.svg"
-                                height={42}
-                                width={42}
-                            ></Image>
-                        </div>
-                    </div>
+            {[
+          { href: "/products/roofing-solution/", title: "Roofing Solution", image: "/roofSol.svg" },
+          { href: "/products/composite-wood/", title: "Composite Wood", image: "/compositeWood.svg" },
+          { href: "/products/thermal_acoustic_insulation-insulation", title: "Thermal and Acoustic Insulation", image: "/thermalInsulation.svg" },
+          { href: "/products/water-proofing", title: "Water Proofing", image: "/waterProofing.svg" },
+        ].map((product, index) => (
+          <Link key={index} href={product.href} className="block">
+            <div className="group h-[270px] transition duration-700 ease-in-out hover:scale-105 cursor-pointer p-3.5 rounded-xl border border-stone-300 flex flex-col justify-between">
+              <div className="relative w-full h-[200px]">
+                <Image
+                  className="object-cover rounded-lg"
+                  alt={product.title}
+                  src={product.image}
+                  fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                />
+              </div>
+              <div className="flex justify-between items-center mt-4">
+                <div className="text-zinc-800 text-[22px] leading-6">{product.title}</div>
+                <div className="w-[42px] h-[42px] relative">
+                  <Image
+                    alt="arrow"
+                    src="/icon-arrow-narrow-right.svg"
+                    fill
+                  />
                 </div>
-                <div
-                    className='w-auto h-[270px] sm:h-[442px]
-        transition duration-700 ease-in-out hover:scale-105 cursor-pointer md:h-[270px] p-3.5 rounded-xl border border-stone-300 flex-col justify-start items-center gap-2.5 inline-flex" '
-                >
-                    <Image
-                        className="w-full h-[200px] sm:h-[378px] md:h-[200px]"
-                        alt="roofing"
-                        src="/AcoustucInsul.svg"
-                        width="0"
-                        height="0"
-                    />
-                    <div className=" h-[42px]  pt-[6px] justify-between hover:duration-700 duration-700 mr-[20px] hover:mr-[0px] hover:ease-in-out cursor-pointer items-center flex">
-                        <div className="text-zinc-800 text-[22px]  ">
-                            Acoustic Insulation
-                        </div>
-                        <div className="w-[42px] hover:duration-700 duration-700 hover:ease-in-out cursor-pointer h-[42px] relative ">
-                            <Image
-                                alt="arrow"
-                                src="/icon-arrow-narrow-right.svg"
-                                height={42}
-                                width={42}
-                            ></Image>
-                        </div>
-                    </div>
-                </div>
-                <Link className="" href="/products/composite-wood/">
-                    <div
-                        className='w-auto h-[270px] sm:h-[442px]
-        transition duration-700 ease-in-out hover:scale-105 cursor-pointer md:h-[270px] p-3.5 rounded-xl border border-stone-300 flex-col justify-start items-center gap-2.5 inline-flex" '
-                    >
-                        <Image
-                            className="w-full h-[200px] sm:h-[378px] md:h-[200px]"
-                            alt="roofing"
-                            src="/compositeWood.svg"
-                            width="0"
-                            height="0"
-                        />
-                        <div className=" h-[42px]  pt-[6px] justify-between hover:duration-700 duration-700 mr-[20px] hover:mr-[0px] hover:ease-in-out cursor-pointer items-center flex">
-                            <div className="text-zinc-800 text-[22px]  ">Composite Wood</div>
-                            <div className="w-[42px] hover:duration-700 duration-700 hover:ease-in-out cursor-pointer h-[42px] relative ">
-                                <Image
-                                    alt="arrow"
-                                    src="/icon-arrow-narrow-right.svg"
-                                    height={42}
-                                    width={42}
-                                ></Image>
-                            </div>
-                        </div>
-                    </div>
-                </Link>
-                <div
-                    className='w-auto h-[270px] sm:h-[442px]
-        transition duration-700 ease-in-out hover:scale-105 cursor-pointer md:h-[270px] p-3.5 rounded-xl border border-stone-300 flex-col justify-start items-center gap-2.5 inline-flex" '
-                >
-                    <Image
-                        className="w-full h-[200px] sm:h-[378px] md:h-[200px]"
-                        alt="roofing"
-                        src="/waterProofing.svg"
-                        width="0"
-                        height="0"
-                    />
-                    <div className=" h-[42px]  pt-[6px] justify-between hover:duration-700 duration-700 mr-[20px] hover:mr-[0px] hover:ease-in-out cursor-pointer items-center flex">
-                        <div className="text-zinc-800 text-[22px]  ">Water Proofing</div>
-                        <div className="w-[42px] hover:duration-700 duration-700 hover:ease-in-out cursor-pointer h-[42px] relative ">
-                            <Image
-                                alt="arrow"
-                                src="/icon-arrow-narrow-right.svg"
-                                height={42}
-                                width={42}
-                            ></Image>
-                        </div>
-                    </div>
-                </div>
+              </div>
+            </div>
+          </Link>
+        ))}
             </div>
         </div>
     )
 }
+
 
 

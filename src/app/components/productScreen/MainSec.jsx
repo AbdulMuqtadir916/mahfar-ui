@@ -41,7 +41,7 @@ const MainSec = () => {
 
   return (
     <>
-      <div className="sticky top-[12.5vw] sm:top-[12vw] md:top-[9vw] lg:top-[94.9px] my-5 z-20 py-5 px-[7vw] xl:px-[10vw] 2xl:px-[10vw] w-full bg-[#ffffffff]">
+      <div style={{ scrollbarWidth: 'none' }} className="sticky top-[12.5vw] sm:top-[12vw] md:top-[9vw] lg:top-[94.9px] my-5 z-20 py-5 px-[7vw] xl:px-[10vw] 2xl:px-[10vw] w-full bg-[#ffffffff]">
         <ProdNavbar
           prodNavBarList={prodNavBarList}
           selectedProduct={selectedProduct}
