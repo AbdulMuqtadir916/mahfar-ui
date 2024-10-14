@@ -35,12 +35,12 @@ const MainFinishingMaterials = () => {
       prodName: "epoxy_floors",
     },
     {
-      id: 4,
+      id: 5,
       name: "Raised Floors",
       prodName: "raised_floors",
     },
     {
-      id: 5,
+      id: 6,
       name: "Wood Flooring",
       prodName: "wood_flooring",
     },
