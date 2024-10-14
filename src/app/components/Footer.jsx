@@ -62,12 +62,12 @@ function Footer() {
           </Link>
           <Link href="/products/thermal_acoustic_insulation-insulation">
             <div className="text-white  hover:text-cyan-500 text-[15px] font-normal ">
-              Thermal Insulation
+              Thermal & Acoustic Insulation
             </div>
           </Link>
-          <Link href="/products/acoustic-insulation">
+          <Link href="/products/finishing-materials">
             <div className=" text-white hover:text-cyan-500  text-[15px] font-normal ">
-              Acostic Insulation
+              Finishing Materials
             </div>
           </Link>
           <Link href="/products/water-proofing">

@@ -32,10 +32,31 @@ function ProductsAndServices() {
         </Link>
         {/* Updated product card layout */}
         {[
-          { href: "/products/roofing-solution/", title: "Roofing Solution", image: "/roofSol.svg" },
-          { href: "/products/composite-wood/", title: "Composite Wood", image: "/compositeWood.svg" },
-          { href: "/products/thermal_acoustic_insulation-insulation", title: "Thermal and Acoustic Insulation", image: "/thermalInsulation.svg" },
-          { href: "/products/water-proofing", title: "Water Proofing", image: "/waterProofing.svg" },
+          {
+            href: "/products/roofing-solution/",
+            title: "Roofing Solution",
+            image: "/roofSol.svg",
+          },
+          {
+            href: "/products/composite-wood/",
+            title: "Composite Wood",
+            image: "/compositeWood.svg",
+          },
+          {
+            href: "/products/thermal_acoustic_insulation-insulation",
+            title: "Thermal and Acoustic Insulation",
+            image: "/thermalInsulation.svg",
+          },
+          {
+            href: "/products/water-proofing",
+            title: "Water Proofing",
+            image: "/waterProofing.svg",
+          },
+          {
+            href: "/products/finishing-materials",
+            title: "Finishing Materials",
+            image: "/finishingMaterials.svg",
+          },
         ].map((product, index) => (
           <Link key={index} href={product.href} className="block">
             <div className="group h-[270px] transition duration-700 ease-in-out hover:scale-105 cursor-pointer p-3.5 rounded-xl border border-stone-300 flex flex-col justify-between">
@@ -49,13 +70,11 @@ function ProductsAndServices() {
                 />
               </div>
               <div className="flex justify-between items-center mt-4">
-                <div className="text-zinc-800 text-[22px] leading-6">{product.title}</div>
+                <div className="text-zinc-800 text-[22px] leading-6">
+                  {product.title}
+                </div>
                 <div className="w-[42px] h-[42px] relative">
-                  <Image
-                    alt="arrow"
-                    src="/icon-arrow-narrow-right.svg"
-                    fill
-                  />
+                  <Image alt="arrow" src="/icon-arrow-narrow-right.svg" fill />
                 </div>
               </div>
             </div>

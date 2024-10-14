@@ -18,18 +18,7 @@ const MainThermalAcoustic = () => {
   const [selectedProduct, setSelectedProduct] = useState(
     "thermal_acoustic_key_features"
   );
-
-  const [selectedMetalShinglesProduct, setSelectedMetalShinglesProduct] =
-    useState("classic");
-  const [selectedSandwichPanelProduct, setSelectedSandwichPanelProduct] =
-    useState("roof_panels");
-  const [selectedFormingProduct, setSelectedFormingProduct] =
-    useState("corrugated_sheets");
-
-  const [selectedItem, setSelectedItem] = useState({
-    name: "CHARCOAL",
-    url: `/Roofing/${selectedMetalShinglesProduct}/Roofng01.jpg`,
-  });
+  
 
   const prodNavBarList = [
     {
@@ -50,66 +39,12 @@ const MainThermalAcoustic = () => {
     },
   ];
 
-  const metalShinglesNavBarList = [
-    { id: 1, name: "Classic", pathUrl: "classic" },
-    { id: 2, name: "Edge Profile", pathUrl: "edge_profile" },
-    { id: 3, name: "Roman Profile", pathUrl: "roman_profile" },
-    { id: 4, name: "Shake", pathUrl: "shake" },
-    { id: 5, name: "Shingle", pathUrl: "shingle" },
-  ];
-
-  const sandwichPanelNavBarList = [
-    { id: 1, name: "Roof Panels", pathUrl: "roof_panels" },
-    { id: 2, name: "Wall Panels", pathUrl: "wall_panels" },
-  ];
-
-  const formingProductNavBarList = [
-    { id: 1, name: "Corrugated Sheets", pathUrl: "corrugated_sheets" },
-    { id: 2, name: "Flashing", pathUrl: "flashing" },
-    { id: 3, name: "Purlins", pathUrl: "purlins" },
-    { id: 4, name: "Ducking Sheet", pathUrl: "ducking_sheet" },
-    { id: 5, name: "Ridge & Curve Sheets", pathUrl: "ridge_&_curve_sheets" },
-  ];
-
-  const colors = [
-    { url: `/Roofing/${selectedMetalShinglesProduct}/Roofng01.jpg` },
-    { url: `/Roofing/${selectedMetalShinglesProduct}/Roofng02.jpg` },
-    { url: `/Roofing/${selectedMetalShinglesProduct}/Roofng03.jpg` },
-    { url: `/Roofing/${selectedMetalShinglesProduct}/Roofng04.jpg` },
-    { url: `/Roofing/${selectedMetalShinglesProduct}/Roofng05.jpg` },
-    { url: `/Roofing/${selectedMetalShinglesProduct}/Roofng06.jpg` },
-    { url: `/Roofing/${selectedMetalShinglesProduct}/Roofng07.jpg` },
-    { url: `/Roofing/${selectedMetalShinglesProduct}/Roofng08.jpg` },
-    { url: `/Roofing/${selectedMetalShinglesProduct}/Roofng09.jpg` },
-    { url: `/Roofing/${selectedMetalShinglesProduct}/Roofng10.jpg` },
-    { url: `/Roofing/${selectedMetalShinglesProduct}/Roofng11.jpg` },
-    { url: `/Roofing/${selectedMetalShinglesProduct}/Roofng12.jpg` },
-    { url: `/Roofing/${selectedMetalShinglesProduct}/Roofng13.jpg` },
-    { url: `/Roofing/${selectedMetalShinglesProduct}/Roofng14.jpg` },
-    { url: `/Roofing/${selectedMetalShinglesProduct}/Roofng15.jpg` },
-    { url: `/Roofing/${selectedMetalShinglesProduct}/Roofng16.jpg` },
-    { url: `/Roofing/${selectedMetalShinglesProduct}/Roofng17.jpg` },
-    { url: `/Roofing/${selectedMetalShinglesProduct}/Roofng18.jpg` },
-  ];
-
   // Function to handle product selection
   const handleProductSelect = (prodName) => {
     setSelectedProduct(prodName);
   };
 
-  // Metal Shingles Items
-  // Function to handle product selection
-  const handleMetalShinglesSelect = (pathUrl) => {
-    setSelectedMetalShinglesProduct(pathUrl);
-  };
-
-  const handleSandwichPanelSelect = (pathUrl) => {
-    setSelectedSandwichPanelProduct(pathUrl);
-  };
-
-  const handleFormingProductSelect = (pathUrl) => {
-    setSelectedFormingProduct(pathUrl);
-  };
+ 
 
   return (
     <div className="px-[7vw] xl:px-[10vw] 2xl:px-[10vw] w-full">
@@ -264,88 +199,8 @@ const MainThermalAcoustic = () => {
                 </ul>
               </div>
             </div>
-            {/* Navbar */}
-
-            {/* <div className="sticky top-[12.5vw] sm:top-[12vw] md:top-[9vw] lg:top-[93.9px] z-20 bg-white py-2 overflow-x-auto">
-              <ProductSlideTabs
-                navBarList={metalShinglesNavBarList}
-                selectedProduct={selectedMetalShinglesProduct}
-                onSelect={handleMetalShinglesSelect}
-              />
-            </div> */}
-            {/* Main */}
-            <div>
-              {/* Images */}
-              <div className="grid grid-cols-2 items-center gap-[15px] justify-items-center justify-center mt-[40px] sm:w-[500px] lg:w-full sm:m-auto lg:m-0 lg:mt-[40px] lg:ml-[40px]">
-                <Image
-                  className="w-full col-span-2 lg:col-span-1 lg:row-span-2 h-auto "
-                  src={`/Roofing/${selectedMetalShinglesProduct}/RoofngSheet1.jpg`}
-                  width="350"
-                  height="350"
-                  alt=""
-                />
-                <Image
-                  className="w-full h-full md:w-[100%] lg:w-[250px] "
-                  src={`/Roofing/${selectedMetalShinglesProduct}/RoofngSheet2.jpg`}
-                  width="250"
-                  height="250"
-                  alt=""
-                />
-                <Image
-                  className="w-full h-full md:w-[100%] lg:w-[250px] "
-                  src={`/Roofing/${selectedMetalShinglesProduct}/RoofngSheet3.jpg`}
-                  width="250"
-                  height="250"
-                  alt=""
-                />
-                {/* More Main Images*/}
-              </div>
-              <div className="mt-[50px] flex flex-col md:items-center lg:flex-row gap-0 lg:gap-[45px] xl:gap-[25px]">
-                <div className="lg:w-[60%] m-auto">
-                  <Image
-                    className="w-auto h-auto mb-[35px]"
-                    src={selectedItem.url}
-                    width="478"
-                    height="318"
-                    alt=""
-                  />
-                </div>
-                <div className="lg:w-[40%]">
-                  <div className="text-slate-900 text-[20px] md:text-[22px] font-medium ">
-                    Select Color
-                  </div>
-                  {/* More Main */}
-                  <div
-                    className={`flex gap-[20px] justify-center md:gap-[10px] lg:gap-[16px] flex-wrap mt-[20px] `}
-                  >
-                    {colors.map((e, i) => (
-                      <div
-                        key={i}
-                        className="flex flex-col cursor-pointer items-center "
-                      >
-                        <div>
-                          <Image
-                            priority={false}
-                            onClick={() => {
-                              setSelectedItem(e);
-                            }}
-                            className={`w-[90px] h-[75px] rounded-lg hover:border-4 hover:border-[#00a9cfe5] ${
-                              e.url == selectedItem.url
-                                ? "border-[#00a8cf8a]  border-4  shadow-md shadow-[#00000040]"
-                                : ""
-                            }`}
-                            src={e.url}
-                            width="90"
-                            height="75"
-                            alt=""
-                          />
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            </div>
+          
+           
           </div>
         )}
 
