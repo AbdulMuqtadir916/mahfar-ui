@@ -60,7 +60,7 @@ function Footer() {
               Composite Wood
             </div>
           </Link>
-          <Link href="/products/thermal-insulation">
+          <Link href="/products/thermal_acoustic_insulation-insulation">
             <div className="text-white  hover:text-cyan-500 text-[15px] font-normal ">
               Thermal Insulation
             </div>
