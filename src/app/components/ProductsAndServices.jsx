@@ -57,6 +57,21 @@ function ProductsAndServices() {
             title: "Finishing Materials",
             image: "/finishingMaterials.svg",
           },
+          {
+            href: "/products/structural-steel",
+            title: "Structural Steel",
+            image: "/structural-steel.png",
+          },
+          {
+            href: "/products/ironmongery",
+            title: "Ironmongery",
+            image: "/ironmongery.png",
+          },
+          // {
+          //   href: "/products/hardware-tools",
+          //   title: "Hardware & Tools",
+          //   image: "/hardware-tools.svg",
+          // },
         ].map((product, index) => (
           <Link key={index} href={product.href} className="block">
             <div className="group h-[270px] transition duration-700 ease-in-out hover:scale-105 cursor-pointer p-3.5 rounded-xl border border-stone-300 flex flex-col justify-between">
